@@ -40,6 +40,7 @@ top_career     <- career |> slice(1)
 top_race       <- best_race |> slice(1)
 bolt08 <- scores |> filter(year == 2008, place == 1)
 bolt09 <- scores |> filter(year == 2009, place == 1)
+n_ann  <- sum(career$has_annulled[1:10])
 
 winners <- scores |>
   group_by(year, competition) |>
@@ -109,8 +110,6 @@ That is what the modern GOAT debate is still reaching toward. Jordan fans do not
 ### Faster, higher, stronger
 
 In 1896, the modern Olympic movement organized itself around *Citius, Altius, Fortius*: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: *Who is the greatest of all time? Compared to who? Compared to when?*
-
-![[YOUR CAPTION.] Image: "[TITLE FROM COMMONS PAGE]", via Wikimedia Commons, [LICENSE AS STATED ON COMMONS PAGE].](images/azerbaijan-stamp-1996.jpg){fig-alt="A 1996 Olympic postage stamp from Azerbaijan" width="35%" fig-align="center"}
 
 ### Can greatness be quantified?
 
@@ -187,7 +186,9 @@ Each of the following is a judgment, not a measurement, and I state my reasoning
 
 @fig-best-race shows each athlete's most dominant final. `r top_race$Competitor`'s win at the `r top_race$year` `r top_race$competition` is the most dominant performance in the sample (score `r fmt(top_race$score)`), followed by `r best_race$Competitor[2]` (`r best_race$year[2]`, `r fmt(best_race$score[2])`) and `r best_race$Competitor[3]` (`r best_race$year[3]`, `r fmt(best_race$score[3])`).
 
-<!-- ADD BOLT PHOTO HERE: paste your image line from the template, with images/bolt-2008.jpg -->
+<!-- PASTE YOUR BOLT IMAGE LINE ON THE LINE BELOW -->
+![USAIN BOLT 2008 Photo: "Usain Bolt Olympics Celebration" by Richard Giles, via Wikimedia Commons, CC BY-SA 2.0.](images/bolt-2008.jpg){fig-alt="Usain Bolt in celebration about 1 or 2 seconds after his 100m victory at Beijing Olympics 2008, breaking the world record." width="65%" fig-align="center"}
+
 
 ```{r}
 #| label: fig-best-race
@@ -219,7 +220,7 @@ style_plotly(p1, height = 560)
 
 ### Career dominance
 
-@fig-career compares each athlete's average score with the number of finals they ran. `r top_career$Competitor` ranks first (mean `r fmt(top_career$mean_score)` across `r top_career$n_finals` finals), followed by `r career$Competitor[2]` and `r career$Competitor[3]`. Among the ten highest-ranked careers, `r sum(career$has_annulled[1:10])` include at least one annulled performance.
+@fig-career compares each athlete's average score with the number of finals they ran. `r top_career$Competitor` ranks first (mean `r fmt(top_career$mean_score)` across `r top_career$n_finals` finals), followed by `r career$Competitor[2]` and `r career$Competitor[3]`. Among the ten highest-ranked careers, `r if (n_ann == 1) "one includes" else paste(n_ann, "include")` at least one annulled performance.
 
 ```{r}
 #| label: fig-career
