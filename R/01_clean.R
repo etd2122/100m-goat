@@ -120,3 +120,52 @@ championships |>
 final_check |>
   filter(n_venues > 1 | n_runners > 9 | !has_1st_place)
 
+# ---- Part 3: Add the hand-entered supplement --------------------------------
+# The toplist only has marks of 10.30 or faster, ends in July 2023, and follows
+# official results (doping-annulled runs removed). The supplement fills those
+# gaps from official results pages, one sourced row per missing runner.
+#   status = OK        normal finish
+#            annulled  ran in the race, result later annulled for doping
+#            injured   finished, but pulled up hurt (time not representative)
+#            DNF / DQ  did not finish / disqualified (no time)
+
+supplement <- read_csv("data/raw/supplement.csv",
+                       col_types = cols(.default = col_character()))
+
+finals_full <- bind_rows(
+  # Rows from the toplist: all are normal finishes
+  finals |>
+    rename(final_note = note) |>
+    mutate(status = "OK",
+           source = "World Athletics all-time toplist (thomascamminady scrape)"),
+  # Rows from the supplement: attach championship details by year
+  supplement |>
+    rename(runner_note = note) |>
+    left_join(championships |>
+                select(year, competition, city, final_date,
+                       official_winner, final_note = note),
+              by = "year") |>
+    transmute(year = as.integer(year), competition, city,
+              Date = final_date, place = as.integer(place),
+              Competitor, Nat, time = as.numeric(time), Wind,
+              official_winner, final_note, status, source, runner_note)
+) |>
+  arrange(year, is.na(place), place)
+
+# ---- Validation: is every field complete? ------------------------------------
+# 5. Entrants per final, counting annulled/DNF/DQ runners.
+#    Expect 8 everywhere except Beijing 2015 (9 lanes).
+field_check <- finals_full |>
+  group_by(year, competition, city) |>
+  summarise(n_entrants = n(),
+            n_with_time = sum(!is.na(time)),
+            .groups = "drop")
+field_check |> filter(n_entrants != 8)   # expect only 2015 (9)
+nrow(field_check)                          # expect 35 finals
+
+# 6. Any runner entered twice in the same final? Expect 0 rows.
+finals_full |> count(year, Competitor) |> filter(n > 1)
+
+# ---- Save ---------------------------------------------------------------------
+write_csv(finals_full, "data/processed/finals.csv")
+

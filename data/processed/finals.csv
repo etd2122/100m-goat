@@ -1,0 +1,282 @@
+year,competition,city,Date,Venue,place,Competitor,Nat,time,Wind,official_winner,final_note,status,source,runner_note
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",1,Jim HINES,USA,9.95,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",2,Lennox MILLER,JAM,10.04,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",3,Charlie GREENE,USA,10.07,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",4,Pablo MONTES,CUB,10.14,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",5,Roger BAMBUCK,FRA,10.16,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",6,Mel PENDER,USA,10.17,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",7,Harry JEROME,CAN,10.2,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1968,Olympic Games,Mexico City,1968-10-14,"Estadio Olímpico, Ciudad de México (MEX)",8,Jean-Louis RAVELOMAMANTSOA,MAD,10.28,0.3,Jim Hines,altitude,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1972,Olympic Games,Munich,1972-09-01,"Olympiastadion, München (GER)",1,Valeriy BORZOV,URS,10.14,-0.3,Valeriy Borzov,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1972,Olympic Games,Munich,1972-09-01,"Olympiastadion, München (GER)",2,Robert TAYLOR,USA,10.24,-0.3,Valeriy Borzov,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1972,Olympic Games,Munich,1972-09-01,NA,3,Lennox MILLER,JAM,10.33,0.3,Valeriy Borzov,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,Olympic Games,Munich,1972-09-01,NA,4,Aleksandr KORNELYUK,URS,10.36,0.3,Valeriy Borzov,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,Olympic Games,Munich,1972-09-01,NA,5,Michael FRAY,JAM,10.4,0.3,Valeriy Borzov,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,Olympic Games,Munich,1972-09-01,NA,6,Jobst HIRSCHT,FRG,10.4,0.3,Valeriy Borzov,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,Olympic Games,Munich,1972-09-01,NA,7,Zenon NOWOSZ,POL,10.46,0.3,Valeriy Borzov,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,Olympic Games,Munich,1972-09-01,NA,NA,Hasely CRAWFORD,TTO,NA,0.3,Valeriy Borzov,NA,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,did not finish
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",1,Hasely CRAWFORD,TTO,10.06,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",2,Don QUARRIE,JAM,10.07,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",3,Valeriy BORZOV,URS,10.14,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",4,Harvey GLANCE,USA,10.19,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",5,Guy ABRAHAMS,PAN,10.25,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,"Olympic Stadium, Montréal (CAN)",6,Johnny JONES,USA,10.27,0.0,Hasely Crawford,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1976,Olympic Games,Montreal,1976-07-24,NA,7,Klaus-Dieter KURRAT,GDR,10.31,NA,Hasely Crawford,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1976_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1976,Olympic Games,Montreal,1976-07-24,NA,8,Petar PETROV,BUL,10.35,NA,Hasely Crawford,NA,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1976_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,"Lenin Stadium, Moskva (URS)",1,Allan WELLS,GBR,10.25,1.2,Allan Wells,US-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1980,Olympic Games,Moscow,1980-07-25,"Lenin Stadium, Moskva (URS)",2,Silvio LEONARD,CUB,10.25,1.2,Allan Wells,US-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1980,Olympic Games,Moscow,1980-07-25,NA,3,Petar PETROV,BUL,10.39,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,NA,4,Aleksandr AKSININ,URS,10.42,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,NA,5,Osvaldo LARA,CUB,10.43,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,NA,6,Vladimir MURAVYOV,URS,10.44,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,NA,7,Marian WORONIN,POL,10.46,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,Olympic Games,Moscow,1980-07-25,NA,8,Hermann PANZO,FRA,10.49,NA,Allan Wells,US-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,World Championships,Helsinki,1983-08-08,"Olympiastadion, Helsinki (FIN)",1,Carl LEWIS,USA,10.07,-0.3,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1983,World Championships,Helsinki,1983-08-08,"Olympiastadion, Helsinki (FIN)",2,Calvin SMITH,USA,10.21,-0.3,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1983,World Championships,Helsinki,1983-08-08,"Olympiastadion, Helsinki (FIN)",3,Emmit KING,USA,10.24,-0.3,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1983,World Championships,Helsinki,1983-08-08,"Olympiastadion, Helsinki (FIN)",4,Allan WELLS,GBR,10.27,-0.3,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1983,World Championships,Helsinki,1983-08-08,"Olympiastadion, Helsinki (FIN)",5,Juan NÚŃEZ,DOM,10.29,-0.3,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1983,World Championships,Helsinki,1983-08-08,NA,6,Christian HAAS,FRG,10.32,-0.3,Carl Lewis,NA,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,World Championships,Helsinki,1983-08-08,NA,7,Paul NARRACOTT,AUS,10.33,-0.3,Carl Lewis,NA,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,World Championships,Helsinki,1983-08-08,NA,8,Desai WILLIAMS,CAN,10.36,-0.3,Carl Lewis,NA,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",1,Carl LEWIS,USA,9.99,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",2,Sam GRADDY,USA,10.19,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",3,Ben JOHNSON,CAN,10.22,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",4,Ron BROWN,USA,10.26,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",5,Mike MCFARLANE,GBR,10.27,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,"Memorial Coliseum, Los Angeles, CA (USA)",6,Raymond STEWART,JAM,10.29,0.2,Carl Lewis,Soviet-led boycott,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1984,Olympic Games,Los Angeles,1984-08-04,NA,7,Donovan REID,GBR,10.33,0.2,Carl Lewis,Soviet-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1984_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1984,Olympic Games,Los Angeles,1984-08-04,NA,8,Tony SHARPE,CAN,10.35,0.2,Carl Lewis,Soviet-led boycott,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1984_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1987,World Championships,Rome,1987-08-30,"Stadio Olimpico, Roma (ITA)",1,Carl LEWIS,USA,9.93,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1987,World Championships,Rome,1987-08-30,"Stadio Olimpico, Roma (ITA)",2,Raymond STEWART,JAM,10.08,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1987,World Championships,Rome,1987-08-30,"Stadio Olimpico, Roma (ITA)",3,Linford CHRISTIE,GBR,10.14,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1987,World Championships,Rome,1987-08-30,"Stadio Olimpico, Roma (ITA)",4,Attila KOVÁCS,HUN,10.2,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1987,World Championships,Rome,1987-08-30,"Stadio Olimpico, Roma (ITA)",5,Viktor BRYZGIN,URS,10.25,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1987,World Championships,Rome,1987-08-30,NA,6,Lee McRAE,USA,10.34,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,OK,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1987,World Championships,Rome,1987-08-30,NA,7,Pierfrancesco PAVONI,ITA,16.23,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,injured,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,pulled up injured but finished
+1987,World Championships,Rome,1987-08-30,NA,NA,Ben JOHNSON,CAN,9.83,1.0,Carl Lewis,Ben Johnson won on the day; result annulled,annulled,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,won on the day; result annulled 1989
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",1,Carl LEWIS,USA,9.92,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",2,Linford CHRISTIE,GBR,9.97,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",3,Calvin SMITH,USA,9.99,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",4,Dennis MITCHELL,USA,10.04,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",5,Robson DA SILVA,BRA,10.11,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,"Olympic Stadium, Jamsil, Seoul (KOR)",6,Desai WILLIAMS,CAN,10.11,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1988,Olympic Games,Seoul,1988-09-24,NA,7,Raymond STEWART,JAM,12.26,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,injured,https://en.wikipedia.org/wiki/Athletics_at_the_1988_Summer_Olympics_%E2%80%93_Men%27s_100_metres,pulled up injured but finished
+1988,Olympic Games,Seoul,1988-09-24,NA,NA,Ben JOHNSON,CAN,9.79,1.1,Carl Lewis,Ben Johnson won on the day; result annulled,annulled,https://en.wikipedia.org/wiki/Athletics_at_the_1988_Summer_Olympics_%E2%80%93_Men%27s_100_metres,won on the day; disqualified for doping
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",1,Carl LEWIS,USA,9.86,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",2,Leroy BURRELL,USA,9.88,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",3,Dennis MITCHELL,USA,9.91,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",4,Linford CHRISTIE,GBR,9.92,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",5,Frank FREDERICKS,NAM,9.95,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",6,Raymond STEWART,JAM,9.96,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",7,Robson DA SILVA,BRA,10.12,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1991,World Championships,Tokyo,1991-08-25,"National Stadium, Tokyo (JPN)",8,Bruny SURIN,CAN,10.14,1.2,Carl Lewis,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",1,Linford CHRISTIE,GBR,9.96,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",2,Frank FREDERICKS,NAM,10.02,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",3,Dennis MITCHELL,USA,10.04,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",4,Bruny SURIN,CAN,10.09,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",5,Leroy BURRELL,USA,10.1,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",6,Olapade ADENIKEN,NGR,10.12,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",7,Raymond STEWART,JAM,10.22,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1992,Olympic Games,Barcelona,1992-08-01,"Estadio Olímpico, Barcelona (ESP)",8,Davidson EZINWA,NGR,10.26,0.5,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",1,Linford CHRISTIE,GBR,9.87,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",2,Andre CASON,USA,9.92,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",3,Dennis MITCHELL,USA,9.99,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",4,Carl LEWIS,USA,10.02,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",5,Bruny SURIN,CAN,10.02,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",6,Frank FREDERICKS,NAM,10.03,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",7,Daniel EFFIONG,NGR,10.04,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1993,World Championships,Stuttgart,1993-08-15,"Gottlieb-Daimler Stadion, Stuttgart (GER)",8,Raymond STEWART,JAM,10.18,0.3,Linford Christie,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",1,Donovan BAILEY,CAN,9.97,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",2,Bruny SURIN,CAN,10.03,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",3,Ato BOLDON,TTO,10.03,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",4,Frank FREDERICKS,NAM,10.07,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",5,Michael MARSH,USA,10.1,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",6,Linford CHRISTIE,GBR,10.12,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",7,Olapade ADENIKEN,NGR,10.2,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1995,World Championships,Gothenburg,1995-08-06,"Ullevi Stadium, Göteborg (SWE)",8,Raymond STEWART,JAM,10.29,1.0,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",1,Donovan BAILEY,CAN,9.84,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",2,Frank FREDERICKS,NAM,9.89,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",3,Ato BOLDON,TTO,9.9,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",4,Dennis MITCHELL,USA,9.99,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",5,Michael MARSH,USA,10,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",6,Davidson EZINWA,NGR,10.14,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,"Olympic Stadium, Atlanta, GA (USA)",7,Michael GREEN,JAM,10.16,0.7,Donovan Bailey,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1996,Olympic Games,Atlanta,1996-07-27,NA,NA,Linford CHRISTIE,GBR,NA,NA,Donovan Bailey,NA,DQ,https://en.wikipedia.org/wiki/Athletics_at_the_1996_Summer_Olympics_%E2%80%93_Men%27s_100_metres,disqualified after two false starts
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",1,Maurice GREENE,USA,9.86,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",2,Donovan BAILEY,CAN,9.91,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",3,Tim MONTGOMERY,USA,9.94,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",4,Frank FREDERICKS,NAM,9.95,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",5,Ato BOLDON,TTO,10.02,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",6,Davidson EZINWA,NGR,10.1,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",7,Bruny SURIN,CAN,10.12,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1997,World Championships,Athens,1997-08-03,"Olympic Stadium, Athina (GRE)",8,Michael MARSH,USA,10.29,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",1,Maurice GREENE,USA,9.8,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",2,Bruny SURIN,CAN,9.84,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",3,Dwain CHAMBERS,GBR,9.97,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",4,Obadele THOMPSON,BAR,10,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",5,Tim HARDEN,USA,10.02,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",6,Tim MONTGOMERY,USA,10.04,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",7,Jason GARDENER,GBR,10.07,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+1999,World Championships,Seville,1999-08-22,"La Cartuja, Sevilla (ESP)",8,Kareem STREETE-THOMPSON,CAY,10.24,0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",1,Maurice GREENE,USA,9.87,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",2,Ato BOLDON,TTO,9.99,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",3,Obadele THOMPSON,BAR,10.04,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",4,Dwain CHAMBERS,GBR,10.08,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",5,Jon DRUMMOND,USA,10.09,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",6,Darren CAMPBELL,GBR,10.13,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,"Olympic Stadium, Sydney (AUS)",7,Kim COLLINS,SKN,10.17,-0.3,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2000,Olympic Games,Sydney,2000-09-23,NA,NA,Aziz ZAKARI,GHA,NA,-0.3,Maurice Greene,NA,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2000_Summer_Olympics_%E2%80%93_Men%27s_100_metres,injured and did not finish
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",1,Maurice GREENE,USA,9.82,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",2,Bernard WILLIAMS,USA,9.94,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",3,Ato BOLDON,TTO,9.98,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",4,Dwain CHAMBERS,GBR,9.99,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",5,Kim COLLINS,SKN,10.07,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",6,Christian MALCOLM,GBR,10.11,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,"Commonwealth Stadium, Edmonton (CAN)",7,Aziz ZAKARI,GHA,10.24,-0.2,Maurice Greene,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2001,World Championships,Edmonton,2001-08-05,NA,NA,Tim MONTGOMERY,USA,9.85,NA,Maurice Greene,NA,annulled,https://en.wikipedia.org/wiki/2001_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,2nd on the day; disqualified 2005 for doping
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",1,Kim COLLINS,SKN,10.07,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",2,Darrel BROWN,TTO,10.08,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",3,Darren CAMPBELL,GBR,10.08,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",4,Bernard WILLIAMS,USA,10.13,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",5,Deji ALIU,NGR,10.21,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,"Stade de France, Paris-St-Denis (FRA)",6,Uchenna EMEDOLU,NGR,10.22,0.0,Kim Collins,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2003,World Championships,Saint-Denis,2003-08-25,NA,NA,Dwain CHAMBERS,GBR,10.08,NA,Kim Collins,NA,annulled,https://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,result annulled for doping
+2003,World Championships,Saint-Denis,2003-08-25,NA,NA,Tim MONTGOMERY,USA,10.11,NA,Kim Collins,NA,annulled,https://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,result annulled for doping
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",1,Justin GATLIN,USA,9.85,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",2,Francis OBIKWELU,POR,9.86,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",3,Maurice GREENE,USA,9.87,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",4,Shawn CRAWFORD,USA,9.89,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",5,Asafa POWELL,JAM,9.94,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",6,Kim COLLINS,SKN,10,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,"Olympic Stadium, Athina (GRE)",7,Obadele THOMPSON,BAR,10.1,0.6,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2004,Olympic Games,Athens,2004-08-22,NA,NA,Aziz ZAKARI,GHA,NA,0.6,Justin Gatlin,NA,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2004_Summer_Olympics_%E2%80%93_Men%27s_100_metres,did not finish
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",1,Justin GATLIN,USA,9.88,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",2,Michael FRATER,JAM,10.05,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",3,Kim COLLINS,SKN,10.05,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",4,Francis OBIKWELU,POR,10.07,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",5,Dwight THOMAS,JAM,10.09,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",6,Leonard SCOTT,USA,10.13,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",7,Marc BURNS,TTO,10.14,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2005,World Championships,Helsinki,2005-08-07,"Olympiastadion, Helsinki (FIN)",8,Aziz ZAKARI,GHA,10.2,0.4,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",1,Tyson GAY,USA,9.85,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",2,Derrick ATKINS,BAH,9.91,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",3,Asafa POWELL,JAM,9.96,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",4,Olusoji Adetokunbo FASUBA,NGR,10.07,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",5,Churandy MARTINA,AHO,10.08,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",6,Marlon DEVONISH,GBR,10.14,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",7,Matic OSOVNIKAR,SLO,10.23,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2007,World Championships,Osaka,2007-08-26,"Yanmar Stadium Nagai, Osaka (JPN)",8,Marc BURNS,TTO,10.29,-0.5,Tyson Gay,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",1,Usain BOLT,JAM,9.69,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",2,Richard THOMPSON,TTO,9.89,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",3,Walter DIX,USA,9.91,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",4,Churandy MARTINA,AHO,9.93,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",5,Asafa POWELL,JAM,9.95,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",6,Michael FRATER,JAM,9.97,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",7,Marc BURNS,TTO,10.01,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2008,Olympic Games,Beijing,2008-08-16,"National Stadium, Beijing (CHN)",8,Darvis PATTON,USA,10.03,0.0,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",1,Usain BOLT,JAM,9.58,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",2,Tyson GAY,USA,9.71,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",3,Asafa POWELL,JAM,9.84,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",4,Daniel BAILEY,ANT,9.93,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",5,Richard THOMPSON,TTO,9.93,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",6,Dwain CHAMBERS,GBR,10,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,"Olympiastadion, Berlin (GER)",7,Marc BURNS,TTO,10,0.9,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2009,World Championships,Berlin,2009-08-16,NA,8,Darvis PATTON,USA,10.34,0.9,Usain Bolt,NA,OK,https://en.wikipedia.org/wiki/2009_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",1,Yohan BLAKE,JAM,9.92,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",2,Walter DIX,USA,10.08,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",3,Kim COLLINS,SKN,10.09,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",4,Christophe LEMAITRE,FRA,10.19,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",5,Daniel BAILEY,ANT,10.26,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,"DS, Daegu (KOR)",6,Jimmy VICAUT,FRA,10.27,-1.4,Yohan Blake,Bolt disqualified for false start,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2011,World Championships,Daegu,2011-08-28,NA,7,Nesta CARTER,JAM,10.95,-1.4,Yohan Blake,Bolt disqualified for false start,OK,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,unusually slow; reason not given in source
+2011,World Championships,Daegu,2011-08-28,NA,NA,Usain BOLT,JAM,NA,-1.4,Yohan Blake,Bolt disqualified for false start,DQ,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,false start
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",1,Usain BOLT,JAM,9.63,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",2,Yohan BLAKE,JAM,9.75,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",3,Justin GATLIN,USA,9.79,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",4,Ryan BAILEY,USA,9.88,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",5,Churandy MARTINA,NED,9.94,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,"Olympic Stadium, London (GBR)",6,Richard THOMPSON,TTO,9.98,1.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2012,Olympic Games,London,2012-08-05,NA,7,Asafa POWELL,JAM,11.99,1.5,Usain Bolt,NA,injured,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,injured about 60m into the race
+2012,Olympic Games,London,2012-08-05,NA,NA,Tyson GAY,USA,9.8,1.5,Usain Bolt,NA,annulled,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,4th on the day; result annulled for doping
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",1,Usain BOLT,JAM,9.77,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",2,Justin GATLIN,USA,9.85,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",3,Nesta CARTER,JAM,9.95,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",4,Kemar BAILEY-COLE,JAM,9.98,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",5,Nickel ASHMEADE,JAM,9.98,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",6,Michael RODGERS,USA,10.04,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",7,Christophe LEMAITRE,FRA,10.06,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2013,World Championships,Moscow,2013-08-11,"Luzhniki Stadion, Moskva (RUS)",8,James DASAOLU,GBR,10.21,-0.3,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",1,Usain BOLT,JAM,9.79,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",2,Justin GATLIN,USA,9.8,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",3,Trayvon BROMELL,USA,9.92,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",3,Andre DE GRASSE,CAN,9.92,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",5,Michael RODGERS,USA,9.94,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",6,Tyson GAY,USA,10,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",7,Asafa POWELL,JAM,10,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",8,Jimmy VICAUT,FRA,10,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2015,World Championships,Beijing,2015-08-23,"National Stadium, Beijing (CHN)",9,Bingtian SU,CHN,10.06,-0.5,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",1,Usain BOLT,JAM,9.81,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",2,Justin GATLIN,USA,9.89,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",3,Andre DE GRASSE,CAN,9.91,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",4,Yohan BLAKE,JAM,9.93,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",5,Akani SIMBINE,RSA,9.94,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",6,Ben Youssef MEITÉ,CIV,9.96,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",7,Jimmy VICAUT,FRA,10.04,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2016,Olympic Games,Rio de Janeiro,2016-08-14,"Estádio Olímpico, Rio de Janeiro (BRA)",8,Trayvon BROMELL,USA,10.06,0.2,Usain Bolt,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",1,Justin GATLIN,USA,9.92,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",2,Christian COLEMAN,USA,9.94,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",3,Usain BOLT,JAM,9.95,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",4,Yohan BLAKE,JAM,9.99,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",5,Akani SIMBINE,RSA,10.01,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",6,Jimmy VICAUT,FRA,10.08,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",7,Reece PRESCOD,GBR,10.17,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2017,World Championships,London,2017-08-05,"Olympic Stadium, London (GBR)",8,Bingtian SU,CHN,10.27,-0.8,Justin Gatlin,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",1,Christian COLEMAN,USA,9.76,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",2,Justin GATLIN,USA,9.89,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",3,Andre DE GRASSE,CAN,9.9,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",4,Akani SIMBINE,RSA,9.93,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",5,Yohan BLAKE,JAM,9.97,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",6,Zharnel HUGHES,GBR,10.03,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",7,Filippo TORTU,ITA,10.07,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2019,World Championships,Doha,2019-09-28,"Khalifa International Stadium, Doha (QAT)",8,Aaron BROWN,CAN,10.08,0.6,Christian Coleman,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",1,Lamont Marcell JACOBS,ITA,9.8,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",2,Fred KERLEY,USA,9.84,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",3,Andre DE GRASSE,CAN,9.89,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",4,Akani SIMBINE,RSA,9.93,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",5,Ronnie BAKER,USA,9.95,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,"National Stadium, Tokyo (JPN)",6,Bingtian SU,CHN,9.98,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2021,Olympic Games,Tokyo,2021-08-01,NA,NA,Enoch ADEGOKE,NGR,NA,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2020_Summer_Olympics_%E2%80%93_Men%27s_100_metres,pulled up injured
+2021,Olympic Games,Tokyo,2021-08-01,NA,NA,Zharnel HUGHES,GBR,NA,0.1,Marcell Jacobs,Tokyo 2020 held in 2021,DQ,https://en.wikipedia.org/wiki/Athletics_at_the_2020_Summer_Olympics_%E2%80%93_Men%27s_100_metres,false start
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",1,Fred KERLEY,USA,9.86,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",2,Marvin BRACY-WILLIAMS,USA,9.88,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",3,Trayvon BROMELL,USA,9.88,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",4,Oblique SEVILLE,JAM,9.97,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",5,Akani SIMBINE,RSA,10.01,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",6,Christian COLEMAN,USA,10.01,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",7,Abdul Hakim SANI BROWN,JPN,10.06,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2022,World Championships,Eugene,2022-07-16,"Hayward Field, Eugene, OR (USA)",8,Aaron BROWN,CAN,10.07,-0.1,Fred Kerley,NA,OK,World Athletics all-time toplist (thomascamminady scrape),NA
+2023,World Championships,Budapest,2023-08-20,NA,1,Noah LYLES,USA,9.83,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,2,Letsile TEBOGO,BOT,9.88,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,3,Zharnel HUGHES,GBR,9.88,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,4,Oblique SEVILLE,JAM,9.88,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,5,Christian COLEMAN,USA,9.92,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,6,Abdul Hakim SANI BROWN,JPN,10.04,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,7,Ferdinand OMANYALA,KEN,10.07,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,World Championships,Budapest,2023-08-20,NA,8,Ryiem FORDE,JAM,10.08,0.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,1,Noah LYLES,USA,9.79,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,2,Kishane THOMPSON,JAM,9.79,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,3,Fred KERLEY,USA,9.81,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,4,Akani SIMBINE,RSA,9.82,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,5,Lamont Marcell JACOBS,ITA,9.85,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,6,Letsile TEBOGO,BOT,9.86,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,7,Kenneth BEDNAREK,USA,9.88,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,Olympic Games,Paris,2024-08-04,NA,8,Oblique SEVILLE,JAM,9.91,1.0,Noah Lyles,after dataset ends,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,1,Oblique SEVILLE,JAM,9.77,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,2,Kishane THOMPSON,JAM,9.82,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,3,Noah LYLES,USA,9.89,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,4,Kenneth BEDNAREK,USA,9.92,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,5,Gift LEOTLELA,RSA,9.95,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,6,Kayinsola AJAYI,NGR,10,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,7,Akani SIMBINE,RSA,10.04,0.3,Oblique Seville,after dataset ends,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,World Championships,Tokyo,2025-09-14,NA,NA,Letsile TEBOGO,BOT,NA,0.3,Oblique Seville,after dataset ends,DQ,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,false start
