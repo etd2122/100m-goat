@@ -1,0 +1,30 @@
+year,place,Competitor,Nat,time,Wind,status,source,note
+1987,6,Lee McRAE,USA,10.34,1.0,OK,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1987,7,Pierfrancesco PAVONI,ITA,16.23,1.0,injured,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,pulled up injured but finished
+1987,,Ben JOHNSON,CAN,9.83,1.0,annulled,https://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,won on the day; result annulled 1989
+1988,7,Raymond STEWART,JAM,12.26,1.1,injured,https://en.wikipedia.org/wiki/Athletics_at_the_1988_Summer_Olympics_%E2%80%93_Men%27s_100_metres,pulled up injured but finished
+1988,,Ben JOHNSON,CAN,9.79,1.1,annulled,https://en.wikipedia.org/wiki/Athletics_at_the_1988_Summer_Olympics_%E2%80%93_Men%27s_100_metres,won on the day; disqualified for doping
+2023,1,Noah LYLES,USA,9.83,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,2,Letsile TEBOGO,BOT,9.88,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,3,Zharnel HUGHES,GBR,9.88,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,4,Oblique SEVILLE,JAM,9.88,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,5,Christian COLEMAN,USA,9.92,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,6,Abdul Hakim SANI BROWN,JPN,10.04,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,7,Ferdinand OMANYALA,KEN,10.07,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2023,8,Ryiem FORDE,JAM,10.08,0.0,OK,https://en.wikipedia.org/wiki/2023_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,1,Noah LYLES,USA,9.79,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,2,Kishane THOMPSON,JAM,9.79,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,3,Fred KERLEY,USA,9.81,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,4,Akani SIMBINE,RSA,9.82,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,5,Lamont Marcell JACOBS,ITA,9.85,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,6,Letsile TEBOGO,BOT,9.86,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,7,Kenneth BEDNAREK,USA,9.88,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2024,8,Oblique SEVILLE,JAM,9.91,1.0,OK,https://en.wikipedia.org/wiki/Athletics_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,1,Oblique SEVILLE,JAM,9.77,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,2,Kishane THOMPSON,JAM,9.82,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,3,Noah LYLES,USA,9.89,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,4,Kenneth BEDNAREK,USA,9.92,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,5,Gift LEOTLELA,RSA,9.95,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,6,Kayinsola AJAYI,NGR,10.00,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,7,Akani SIMBINE,RSA,10.04,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
+2025,,Letsile TEBOGO,BOT,,0.3,DQ,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,false start
