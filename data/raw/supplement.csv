@@ -54,7 +54,7 @@ year,place,Competitor,Nat,time,Wind,status,source,note
 2003,,Tim MONTGOMERY,USA,10.11,,annulled,https://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,result annulled for doping
 2004,,Aziz ZAKARI,GHA,,0.6,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2004_Summer_Olympics_%E2%80%93_Men%27s_100_metres,did not finish
 2009,8,Darvis PATTON,USA,10.34,0.9,OK,https://en.wikipedia.org/wiki/2009_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
-2011,7,Nesta CARTER,JAM,10.95,-1.4,OK,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,unusually slow; reason not given in source
+2011,7,Nesta CARTER,JAM,10.95,-1.4,injured,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,reclassified injured: 0.68s behind 6th place; time treated as non-representative
 2011,,Usain BOLT,JAM,,-1.4,DQ,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,false start
 2012,7,Asafa POWELL,JAM,11.99,1.5,injured,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,injured about 60m into the race
 2012,,Tyson GAY,USA,9.80,1.5,annulled,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,4th on the day; result annulled for doping

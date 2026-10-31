@@ -169,3 +169,9 @@ finals_full |> count(year, Competitor) |> filter(n > 1)
 # ---- Save ---------------------------------------------------------------------
 write_csv(finals_full, "data/processed/finals.csv")
 
+s <- readr::read_lines("data/raw/supplement.csv")
+s <- sub("Nesta CARTER,JAM,10.95,-1.4,OK,(.*),unusually slow; reason not given in source",
+         "Nesta CARTER,JAM,10.95,-1.4,injured,\\1,reclassified injured: 0.68s behind 6th place; time treated as non-representative",
+         s)
+readr::write_lines(s, "data/raw/supplement.csv")
+table(readr::read_csv("data/raw/supplement.csv", show_col_types = FALSE)$status)  # injured should now be 4
