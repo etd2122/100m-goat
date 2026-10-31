@@ -28,3 +28,36 @@ year,place,Competitor,Nat,time,Wind,status,source,note
 2025,6,Kayinsola AJAYI,NGR,10.00,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
 2025,7,Akani SIMBINE,RSA,10.04,0.3,OK,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,after dataset ends
 2025,,Letsile TEBOGO,BOT,,0.3,DQ,https://en.wikipedia.org/wiki/2025_World_Athletics_Championships_%E2%80%93_Men%27s_100_metres,false start
+1972,3,Lennox MILLER,JAM,10.33,0.3,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,4,Aleksandr KORNELYUK,URS,10.36,0.3,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,5,Michael FRAY,JAM,10.40,0.3,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,6,Jobst HIRSCHT,FRG,10.40,0.3,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,7,Zenon NOWOSZ,POL,10.46,0.3,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1972,,Hasely CRAWFORD,TTO,,0.3,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_1972_Summer_Olympics_%E2%80%93_Men%27s_100_metres,did not finish
+1976,7,Klaus-Dieter KURRAT,GDR,10.31,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1976_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1976,8,Petar PETROV,BUL,10.35,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1976_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,3,Petar PETROV,BUL,10.39,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,4,Aleksandr AKSININ,URS,10.42,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,5,Osvaldo LARA,CUB,10.43,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,6,Vladimir MURAVYOV,URS,10.44,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,7,Marian WORONIN,POL,10.46,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1980,8,Hermann PANZO,FRA,10.49,,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1980_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,6,Christian HAAS,FRG,10.32,-0.3,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,7,Paul NARRACOTT,AUS,10.33,-0.3,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1983,8,Desai WILLIAMS,CAN,10.36,-0.3,OK,https://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1984,7,Donovan REID,GBR,10.33,0.2,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1984_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1984,8,Tony SHARPE,CAN,10.35,0.2,OK,https://en.wikipedia.org/wiki/Athletics_at_the_1984_Summer_Olympics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+1996,,Linford CHRISTIE,GBR,,,DQ,https://en.wikipedia.org/wiki/Athletics_at_the_1996_Summer_Olympics_%E2%80%93_Men%27s_100_metres,disqualified after two false starts
+2000,,Aziz ZAKARI,GHA,,-0.3,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2000_Summer_Olympics_%E2%80%93_Men%27s_100_metres,injured and did not finish
+2001,,Tim MONTGOMERY,USA,9.85,,annulled,https://en.wikipedia.org/wiki/2001_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,2nd on the day; disqualified 2005 for doping
+2003,,Dwain CHAMBERS,GBR,10.08,,annulled,https://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,result annulled for doping
+2003,,Tim MONTGOMERY,USA,10.11,,annulled,https://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,result annulled for doping
+2004,,Aziz ZAKARI,GHA,,0.6,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2004_Summer_Olympics_%E2%80%93_Men%27s_100_metres,did not finish
+2009,8,Darvis PATTON,USA,10.34,0.9,OK,https://en.wikipedia.org/wiki/2009_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,missing from toplist (slower than 10.30)
+2011,7,Nesta CARTER,JAM,10.95,-1.4,OK,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,unusually slow; reason not given in source
+2011,,Usain BOLT,JAM,,-1.4,DQ,https://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics_%E2%80%93_Men%27s_100_metres,false start
+2012,7,Asafa POWELL,JAM,11.99,1.5,injured,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,injured about 60m into the race
+2012,,Tyson GAY,USA,9.80,1.5,annulled,https://en.wikipedia.org/wiki/Athletics_at_the_2012_Summer_Olympics_%E2%80%93_Men%27s_100_metres,4th on the day; result annulled for doping
+2021,,Enoch ADEGOKE,NGR,,0.1,DNF,https://en.wikipedia.org/wiki/Athletics_at_the_2020_Summer_Olympics_%E2%80%93_Men%27s_100_metres,pulled up injured
+2021,,Zharnel HUGHES,GBR,,0.1,DQ,https://en.wikipedia.org/wiki/Athletics_at_the_2020_Summer_Olympics_%E2%80%93_Men%27s_100_metres,false start
+
