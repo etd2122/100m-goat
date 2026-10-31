@@ -1,0 +1,7 @@
+.Rproj.user
+data/raw/athletics_full.csv
+.Rhistory
+.RData
+.httr-oauth
+.DS_Store
+.quarto
