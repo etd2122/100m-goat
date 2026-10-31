@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "100m GOAT"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contents"
+    code-fold: true
+    code-summary: "Show code"
+    fig-align: center
+
+execute:
+  warning: false
+  message: false
