@@ -16,7 +16,7 @@ link-citations: true
 
 ```{r}
 #| label: setup
-#| output: false
+#| include: false
 library(readr)
 library(dplyr)
 library(ggplot2)
@@ -110,6 +110,8 @@ That is what the modern GOAT debate is still reaching toward. Jordan fans do not
 
 In 1896, the modern Olympic movement organized itself around *Citius, Altius, Fortius*: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: *Who is the greatest of all time? Compared to who? Compared to when?*
 
+![[YOUR CAPTION.] Image: "[TITLE FROM COMMONS PAGE]", via Wikimedia Commons, [LICENSE AS STATED ON COMMONS PAGE].](images/azerbaijan-stamp-1996.jpg){fig-alt="A 1996 Olympic postage stamp from Azerbaijan" width="35%" fig-align="center"}
+
 ### Can greatness be quantified?
 
 Measurement does not end the argument. In a 2026 study, sixteen sports scientists set out to build a data-driven ranking of the greatest runners at the Olympic Games and World Championships [@hanley2026]. Before the study, an informal survey of 63 coaches, athletes and sport scientists at a 2024 conference showed that even the experts did not agree on the criteria. The authors concluded that "no manner of performing such a ranking task can be perfect or completely objective." Change the era, and you change the winner. A ranking table looks like a set of numbers, but it is really a narrative choice. And if scientists cannot agree on what greatness means in running, a sport with a clock, the basketball debate never stood a chance [@nelson].
@@ -184,6 +186,8 @@ Each of the following is a judgment, not a measurement, and I state my reasoning
 ### Single-race dominance
 
 @fig-best-race shows each athlete's most dominant final. `r top_race$Competitor`'s win at the `r top_race$year` `r top_race$competition` is the most dominant performance in the sample (score `r fmt(top_race$score)`), followed by `r best_race$Competitor[2]` (`r best_race$year[2]`, `r fmt(best_race$score[2])`) and `r best_race$Competitor[3]` (`r best_race$year[3]`, `r fmt(best_race$score[3])`).
+
+<!-- ADD BOLT PHOTO HERE: paste your image line from the template, with images/bolt-2008.jpg -->
 
 ```{r}
 #| label: fig-best-race
