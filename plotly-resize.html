@@ -1,0 +1,13 @@
+<script>
+/* Site styling only: refit the interactive charts to their box on load and on resize (mobile). */
+(function () {
+  function fit() {
+    if (!window.Plotly) return;
+    document.querySelectorAll('.js-plotly-plot').forEach(function (el) {
+      Plotly.relayout(el, { width: el.parentElement.clientWidth });
+    });
+  }
+  window.addEventListener('load', function () { setTimeout(fit, 300); });
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 150); });
+})();
+</script>
