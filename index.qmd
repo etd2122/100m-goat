@@ -66,10 +66,10 @@ style_plotly <- function(p, height = 520) {
       legend = list(orientation = "h", x = 0, y = 1.1, title = list(text = "")),
       hoverlabel = list(bgcolor = "white", bordercolor = "#d0d0d0",
                         font = list(size = 13)),
-      font = list(family = "Source Sans 3, Source Sans Pro, Helvetica, Arial, sans-serif"),
+      font = list(family = "Source Sans Pro, Helvetica, Arial, sans-serif"),
       margin = list(t = 50)
     ) |>
-    config(displayModeBar = FALSE, responsive = TRUE)
+    config(displayModeBar = FALSE)
 }
 ```
 
