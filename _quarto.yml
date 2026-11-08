@@ -4,11 +4,24 @@ project:
 
 website:
   title: "100m GOAT"
+  site-url: "https://etd2122.github.io/100m-goat/"
+  repo-url: "https://github.com/etd2122/100m-goat"
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/etd2122/100m-goat
+        aria-label: GitHub repository
+      - icon: linkedin
+        href: https://www.linkedin.com/in/emelia-davis
+        aria-label: LinkedIn
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
+    title-block-banner: true
+    smooth-scroll: true
     toc: true
+    toc-depth: 2
     toc-title: "Contents"
     code-fold: true
     code-summary: "Show code"

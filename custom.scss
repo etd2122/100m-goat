@@ -1,0 +1,229 @@
+/*-- scss:defaults --*/
+// The GOAT Project: site theme layered on Bootstrap/cosmo.
+// Palette: ink navy + paper + one track-red accent (the same red as the charts).
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+$ink:    #0E1A2B;
+$paper:  #FAF8F3;
+$red:    #C8102E;
+$muted:  #5B6472;
+$rule:   #E4E0D6;
+
+$body-bg:    $paper;
+$body-color: #1D2633;
+$link-color: #A30D25;
+$primary:    $red;
+$secondary:  $ink;
+
+$font-family-sans-serif: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$headings-font-family:   "Fraunces", Georgia, serif;
+$headings-font-weight:   650;
+$headings-color:         $ink;
+$font-size-root:         17px;
+$line-height-base:       1.65;
+
+$code-color:             #8A1C2B;
+$border-radius:          6px;
+$btn-border-radius:      999px;
+
+/*-- scss:rules --*/
+
+:root {
+  --goat-ink: #{$ink};
+  --goat-red: #{$red};
+  --goat-paper: #{$paper};
+  --goat-muted: #{$muted};
+  --goat-rule: #{$rule};
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+}
+
+/* ---------- Browser surfaces ---------- */
+::selection { background: color-mix(in srgb, var(--goat-red) 20%, transparent); }
+html { scrollbar-color: #C9C3B6 transparent; scrollbar-width: thin; caret-color: var(--goat-red); }
+a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--goat-red); outline-offset: 3px; border-radius: 3px; }
+h1, h2, h3, h4 { text-wrap: balance; letter-spacing: -0.01em; }
+p, li { text-wrap: pretty; }
+section[id], h2[id], h3[id] { scroll-margin-top: 4.5rem; }
+table { font-variant-numeric: tabular-nums; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: var(--goat-ink) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.navbar-title { font-family: $headings-font-family; font-weight: 500; letter-spacing: .01em; }
+
+/* ---------- Hero (title banner) ---------- */
+/* Signature move: eight faint lane lines, one of them red. */
+.quarto-title-banner {
+  background-color: var(--goat-ink) !important;
+  background-image:
+    linear-gradient(to bottom, transparent calc(100% - 3px), var(--goat-red) calc(100% - 3px)),
+    repeating-linear-gradient(to bottom,
+      transparent 0, transparent 47px,
+      rgba(255,255,255,.07) 47px, rgba(255,255,255,.07) 48px);
+  color: #F3EFE6;
+  padding: 4.5rem 0 3.5rem !important;
+  margin-bottom: 0 !important;
+}
+.quarto-title-banner .title {
+  font-family: $headings-font-family;
+  font-weight: 650;
+  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  line-height: 1.05;
+  color: #FFFFFF;
+  max-width: 18ch;
+}
+.quarto-title-banner .subtitle {
+  font-family: $font-family-sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #C9CFD8;
+  max-width: 52ch;
+  margin-top: 1rem;
+  line-height: 1.45;
+}
+
+/* The abstract lives in page metadata (link previews); At a Glance replaces it on the page. */
+.quarto-title-banner .description { display: none; }
+
+/* Author / date strip under the banner */
+.quarto-title-meta {
+  border-bottom: 1px solid var(--goat-rule);
+  padding-bottom: 1rem;
+  margin-top: 1.25rem !important;
+}
+.quarto-title-meta-heading { color: var(--goat-muted); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.quarto-title-meta-contents { font-size: .95rem; }
+
+/* Abstract reads as a lead paragraph */
+.abstract { margin-top: 1.75rem; }
+.abstract .block-title { display: none; }
+.abstract p { font-size: 1.06rem; color: #2A3442; }
+.keywords { color: var(--goat-muted); font-size: .9rem; }
+.keywords .block-title { font-weight: 600; }
+
+/* ---------- Body typography ---------- */
+#quarto-content main { max-width: 760px; }
+h2 {
+  font-size: 1.85rem;
+  margin-top: 3.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--goat-rule);
+  border-bottom: none !important;
+}
+h2 .header-section-number { color: var(--goat-red); font-family: $font-family-monospace; font-size: .62em; font-weight: 500; vertical-align: .35em; margin-right: .6rem; }
+h3 { font-size: 1.3rem; margin-top: 2rem; }
+h3 .header-section-number { color: var(--goat-muted); font-family: $font-family-monospace; font-size: .7em; font-weight: 400; margin-right: .5rem; }
+strong { font-weight: 700; color: $ink; }
+
+/* ---------- At a glance ---------- */
+.glance {
+  margin: 1.5rem 0 1rem;
+  padding: 1.4rem 1.6rem;
+  background: #FFFFFF;
+  border: 1px solid var(--goat-rule);
+  border-radius: 10px;
+}
+.glance dl { display: grid; grid-template-columns: 7.5rem 1fr; gap: .85rem 1.25rem; margin: 0; }
+.glance dt {
+  font-family: $font-family-monospace;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--goat-red);
+  padding-top: .25rem;
+}
+.glance dd { margin: 0; }
+.glance .facts {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--goat-rule);
+  color: var(--goat-muted);
+  font-size: .92rem;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 575px) {
+  .glance { padding: 1.1rem 1.1rem; }
+  .glance dl { grid-template-columns: 1fr; gap: .2rem; }
+  .glance dd { margin-bottom: .7rem; }
+}
+
+.link-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.25rem 0 .5rem; }
+.link-row .btn { font-weight: 600; font-size: .92rem; padding: .45rem 1.1rem; }
+
+/* ---------- Buttons ---------- */
+.btn { transition: transform 140ms var(--ease-out), background-color 150ms ease, color 150ms ease, border-color 150ms ease; }
+.btn:active { transform: scale(.97); }
+.btn-primary { background: var(--goat-red); border-color: var(--goat-red); color: #fff; }
+.btn-primary:hover { background: #A30D25; border-color: #A30D25; }
+.btn-outline-secondary { color: $ink; border-color: #C9C3B6; background: transparent; }
+.btn-outline-secondary:hover { background: $ink; border-color: $ink; color: #fff; }
+
+/* ---------- Callouts ---------- */
+.callout {
+  border: 1px solid color-mix(in srgb, var(--goat-ink) 16%, transparent) !important;
+  border-left-width: 1px !important;
+  border-radius: 10px !important;
+  background: #FFFFFF;
+}
+.callout .callout-header { background: transparent !important; border-bottom: none !important; }
+.callout-title-container { font-family: $font-family-sans-serif; font-weight: 700; color: $ink; }
+.callout.callout-style-default .callout-body { padding-top: .25rem; }
+
+/* ---------- Figures ---------- */
+.cell-output-display, .quarto-figure {
+  background: #FFFFFF;
+  border: 1px solid var(--goat-rule);
+  border-radius: 10px;
+  padding: 1rem 1rem .5rem;
+  margin: 1.5rem 0;
+}
+.cell-output-display .quarto-figure { border: none; padding: 0; margin: 0; background: transparent; }
+figcaption, .figure-caption {
+  color: var(--goat-muted) !important;
+  font-size: .9rem;
+  line-height: 1.5;
+  margin-top: .5rem;
+}
+.quarto-figure img { border-radius: 6px; }
+
+/* Math blocks scroll on small screens instead of overflowing */
+.math.display { overflow-x: auto; overflow-y: hidden; display: block; }
+
+/* ---------- Code ---------- */
+details.code-fold > summary {
+  font-family: $font-family-monospace;
+  font-size: .78rem;
+  color: var(--goat-muted);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+details.code-fold > summary:hover { color: var(--goat-red); }
+div.sourceCode, pre.sourceCode { max-width: 100%; overflow-x: auto !important; }
+pre.sourceCode code { white-space: pre; }
+div.sourceCode { background: #F3F0E8 !important; border: 1px solid var(--goat-rule) !important; border-radius: 8px; }
+pre code { font-size: .82rem; }
+
+/* ---------- TOC ---------- */
+#TOC, nav#TOC { font-size: .88rem; }
+#TOC .nav-link.active, .sidebar nav[role=doc-toc] ul > li > a.active { color: var(--goat-red) !important; border-left-color: var(--goat-red) !important; }
+#toc-title { font-family: $font-family-monospace; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--goat-muted); }
+
+/* ---------- References ---------- */
+#refs { font-size: .92rem; }
+.csl-entry { margin-bottom: .6rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* ---------- Small-screen safety ---------- */
+#refs a, .csl-entry { overflow-wrap: anywhere; }
+.cell-output-display { overflow: hidden; }
+.html-widget { max-width: 100%; }

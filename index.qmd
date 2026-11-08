@@ -5,7 +5,7 @@ author:
   - name: Emelia Davis
     affiliation: Columbia University
 date: last-modified
-abstract: |
+description: |
   Every GOAT debate is a fight over who controls the victory narrative. In antiquity, poets like Pindar were paid to decide which victories survived; today, sports media plays the same role. The ancient Greeks never measured athletic performance: victory meant beating the man next to you, not the clock. In this paper, I argue that this ancient definition of victory can be recovered with modern measurement. Using all 35 men's 100m finals at the Olympic Games (1968–2024) and World Athletics Championships (1983–2025), I score every finalist by how far they beat the other runners in their own race. I show that this within-race comparison removes race-level confounders such as wind, altitude, track and era by the same logic as fixed effects, while leaving field strength uncontrolled. Usain Bolt ranks first on career dominance (mean score 2.43 across 7 finals) and on single-race dominance (Beijing 2008, score 5.18). Even so, every choice behind the number is a narrative choice, and I document each one.
 keywords: [sports analytics, ancient Olympics, sprinting, sports media, fixed effects, omitted variable bias]
 number-sections: true
@@ -66,58 +66,39 @@ style_plotly <- function(p, height = 520) {
       legend = list(orientation = "h", x = 0, y = 1.1, title = list(text = "")),
       hoverlabel = list(bgcolor = "white", bordercolor = "#d0d0d0",
                         font = list(size = 13)),
-      font = list(family = "Source Sans Pro, Helvetica, Arial, sans-serif"),
+      font = list(family = "Source Sans 3, Source Sans Pro, Helvetica, Arial, sans-serif"),
       margin = list(t = 50)
     ) |>
-    config(displayModeBar = FALSE)
+    config(displayModeBar = FALSE, responsive = TRUE)
 }
 ```
 
-## Preface {.unnumbered}
+## At a Glance {.unnumbered}
 
-This paper grew out of my final presentation for **CLCV OC3330: Ancient and Modern Olympics** (Columbia University, Summer 2026), which I delivered to faculty in Athens, Greece, after six weeks of on-site research. In Athens, I argued that the GOAT debate is really a fight over who controls the victory narrative. Here, I take the next step: I build the measurement that the ancient Greeks chose not to, and I ask what it can and cannot tell us.
+::: {.glance}
+<dl>
+<dt>Question</dt>
+<dd>Which men's 100m sprinter most dominated the runners in their own race? Not who ran fastest, but who beat the field by the most.</dd>
+<dt>Method</dt>
+<dd>A leave-one-out z-score inside each final: how many standard deviations a runner finished ahead of everyone else in that race. Like a fixed effect, it cancels wind, altitude, track and era. It does not control for field strength.</dd>
+<dt>Finding</dt>
+<dd>`r top_career$Competitor` ranks first on career dominance (mean `r fmt(top_career$mean_score)` across `r top_career$n_finals` finals) and on single-race dominance (`r top_race$competition` `r top_race$year`, `r fmt(top_race$score)`).</dd>
+<dt>Caveat</dt>
+<dd>Most careers span two to six finals, so career averages carry wide uncertainty and the order below first place is noisy (@sec-limits).</dd>
+</dl>
+<p class="facts">`r n_finals_total` finals &middot; `r n_scored` scored performances &middot; `r n_runners` athletes &middot; Olympic Games 1968–2024, World Championships 1983–2025</p>
+:::
 
-[View the original presentation](https://docs.google.com/presentation/d/15JcPSdAi1Mbq-asNEOIS1xl9LPjafGVmoq-BmM_cRKI){.btn .btn-outline-primary role="button" target="_blank"} [Code and data on GitHub](https://github.com/etd2122/100m-goat){.btn .btn-outline-secondary role="button" target="_blank"} [LinkedIn](https://www.linkedin.com/in/emelia-davis){.btn .btn-outline-secondary role="button" target="_blank"}
+::: {.link-row}
+[Code and data on GitHub](https://github.com/etd2122/100m-goat){.btn .btn-primary role="button" target="_blank"} [Original Athens presentation](https://docs.google.com/presentation/d/15JcPSdAi1Mbq-asNEOIS1xl9LPjafGVmoq-BmM_cRKI){.btn .btn-outline-secondary role="button" target="_blank"} [LinkedIn](https://www.linkedin.com/in/emelia-davis){.btn .btn-outline-secondary role="button" target="_blank"}
+:::
 
-## Introduction
-
-In June 2026, LeBron James told TIME magazine that he would not put anyone above himself as the greatest of all time: "I'm not taking nobody over me. There's no question" [@espn2026]. Depending on who you ask, the claim is either obviously true or obviously wrong. Stephen A. Smith's response was revealing. He did not say James was wrong about the statistics, or that his championships did not add up. He said, "The man is addicted to trying to control the narrative" [@fadeaway2026; @sportscasting]. The accusation was not about data at all. It was about storytelling, and about who controls the victory narrative.
-
-Smith does not play basketball. He never has. Yet he is one of the most powerful sports narrators alive, and his verdict on Jordan versus LeBron carries more weight in public discourse than any statistic. His version of greatness shapes what millions of people believe.
-
-I argue that Smith described the oldest accusation in sports history. In antiquity, Pindar and the other authors who celebrated Olympic victors were paid to do exactly what James and Smith are doing: control the narrative, frame the legacy, and make sure their version of a victory was the one that survived.
-
-This paper makes three contributions. First, it places the modern GOAT debate inside that much older tension between narrative and record. Second, it takes the ancient definition of victory, beating the man next to you rather than the clock, and turns it into a measurement: a within-race dominance score for every finalist in `r n_finals_total` Olympic and World Championship men's 100m finals. I show that this score removes race-level confounders by the same logic as fixed effects. Third, it documents every choice behind the measurement, because those choices are where the narrative hides.
-
-Section 2 traces the history. Sections 3 and 4 describe the data and methodology. Section 5 presents the results, Section 6 discusses them, Section 7 sets out the limitations, and Section 8 concludes.
-
-## Background: Who Controls the Victory?
-
-### Pindar and the business of narrative
-
-When Pindar was commissioned to write a victory ode, he was not documenting a result; he was manufacturing one. Odes were built to travel and were often performed weeks after the victory, so the version that survived was the poet's [@kuleuven]. This is why we remember Pindar's Hieron more vividly than the historical Hieron of Syracuse. The poet, not the race, decided what the victory meant.
-
-### The empty scoreboard
-
-There was no record-keeping of performance at the ancient Olympics. The Greeks had systems for judging competition, but they deliberately chose not to measure athletic performance [@greeceis; @miller2004]. Athletic excellence was qualitative: you either had it or you did not, and the best man won. Victory meant beating the man next to you, not the clock.
-
-### From champion to god
-
-Theagenes of Thasos is the clearest example of where this leads. He reportedly won around 1,400 bouts across a 22-year career, which makes him arguably the most dominant athlete of the ancient world. After his death, his statue became a site of worship, effectively declaring him a god [@greekreporter2025]. The ancient world resolved its GOAT debates by raising the hero to divine status.
-
-That is what the modern GOAT debate is still reaching toward. Jordan fans do not just think he was the best basketball player; they think he was something beyond human. And sports media is more than happy to sell that narrative, because it is the product. Smith is not paid to recite statistics. He is paid to tell a story.
-
-### Faster, higher, stronger
-
-In 1896, the modern Olympic movement organized itself around *Citius, Altius, Fortius*: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: *Who is the greatest of all time? Compared to who? Compared to when?*
-
-### Can greatness be quantified?
-
-Measurement does not end the argument. In a 2026 study, sixteen sports scientists set out to build a data-driven ranking of the greatest runners at the Olympic Games and World Championships [@hanley2026]. Before the study, an informal survey of 63 coaches, athletes and sport scientists at a 2024 conference showed that even the experts did not agree on the criteria. The authors concluded that "no manner of performing such a ranking task can be perfect or completely objective." Change the era, and you change the winner. A ranking table looks like a set of numbers, but it is really a narrative choice. And if scientists cannot agree on what greatness means in running, a sport with a clock, the basketball debate never stood a chance [@nelson].
-
-### The question I ask
-
-So I narrow the question. Instead of asking who is the greatest, I return to the ancient definition of victory and ask who most dominated **the runners next to them**. Then I make every choice behind the answer visible.
+<!-- DRAFT for Emmy: rewrite in your own words before merging, or delete.
+::: {.callout-note appearance="simple"}
+## Why a baseball analyst should care
+The score does for a sprint final what ERA+ or wRC+ does for a season: it judges a performance against the environment it happened in, not against a raw number. The open problem is the same one baseball faces with small samples. A sprinter with two finals is a hitter with 50 plate appearances, and the robustness section shows how much the ranking moves when that noise is taken seriously.
+:::
+-->
 
 ## Data
 
@@ -133,7 +114,7 @@ The primary source is the World Athletics all-time performance list [@worldathle
 
 I identified finals by matching championship final dates to finishing-position codes. Automated checks confirm that every final has a complete field (eight entrants, or nine at Beijing 2015, which used nine lanes), that no athlete appears twice in a final, and that every time is numeric. These checks caught real errors. The 2003 World Championships final was first assigned to the wrong date, and a minor meet elsewhere shared the date of the 2007 final. On each date, I keep only the venue with the most finishers and report anything the rule removes.
 
-## Methodology
+## Methodology {#sec-methods}
 
 ### The dominance score
 
@@ -277,28 +258,83 @@ p3 <- ggplot(winners_plot, aes(x = year, y = score)) +
 style_plotly(p3)
 ```
 
+<!-- TODO (Emmy): Robustness section goes here, before Discussion.
+## Robustness {#sec-robust}
+Planned checks (write the R in R/03_robustness.R, present results here):
+  1. Raw margin in seconds (no SD scaling) - does Beijing 2008 stay #1?
+  2. Robust z: median / MAD of the other finishers instead of mean / SD
+  3. Drop doping-annulled races and runners entirely
+  4. Career minimum of 3 finals instead of 2
+  5. Empirical-Bayes shrinkage of career means toward the overall mean
+Report: rank of each top-10 athlete under each choice, in one table.
+-->
+
 ## Discussion
 
 The numbers and the narrative agree: `r top_career$Competitor` ranks first on both career and single-race dominance. So does the 2026 ranking by @hanley2026, which used an entirely different method, counting medals and world records, and also placed Bolt first. When two methods built on different definitions of greatness reach the same answer, that agreement means something.
 
 But look closely at what the score rewards. Bolt's world-record 9.58 at Berlin 2009 scores `r fmt(bolt09$score)`, far below his `r fmt(bolt08$time)` at Beijing 2008 (`r fmt(bolt08$score)`). One slower finisher in 2009 widened the field's spread and shrank his margin in standardized terms. By this measure, his fastest race was not his most dominant one. That is not a flaw in the score; it is the ancient definition doing exactly what it says. The Greeks did not care about the clock either.
 
-And every result in this paper rests on choices I made: to count races as they were run, to set injured runners aside, to compare athletes only with their own fields. Each is defensible. None is objective. The modern scoreboard did not remove the narrator; it moved the narrator into the method. The only honest response is to show every choice, which is what Section 4 does.
+And every result in this paper rests on choices I made: to count races as they were run, to set injured runners aside, to compare athletes only with their own fields. Each is defensible. None is objective. The modern scoreboard did not remove the narrator; it moved the narrator into the method. The only honest response is to show every choice, which is what @sec-methods does.
 
 Anyone who has sat at a family dinner table and been told, with complete certainty, that athletes today are soft, and that nobody could touch Jordan, knows that no statistic will change that person's mind. They are not remembering a performance; they are remembering a story. Maybe that is what makes sports worth arguing about. Pindar told you who won, and you believed him. We have more information than any fans in history, and we still cannot agree. That is not because we are irrational. It is because greatness is genuinely contested, and the debate forces each of us to define what we value: rings or longevity, dominance or consistency, the era we watched or the one we did not. For the media, the debate never being solved is not a failure. It is the business model.
 
-## Limitations
+## Limitations {#sec-limits}
 
 - **Field strength is not controlled.** As @eq-diff shows, race effects cancel, but the ability of the other finalists does not. Weaker fields, including those affected by the 1980 and 1984 boycotts, inflate scores.
 - **Sensitivity to spread.** Because the score is scaled by the field's standard deviation, one outlying finisher can noticeably change everyone else's score.
 - **Small samples.** Each final has six to nine scored finishers, and most athletes ran only a few finals, so career averages are imprecise.
 - **Scope.** I analyze only championship finals, not heats, semifinals or other elite races.
 
+## Context: Who Controls the Victory? {#sec-context}
+
+In June 2026, LeBron James told TIME magazine that he would not put anyone above himself as the greatest of all time: "I'm not taking nobody over me. There's no question" [@espn2026]. Depending on who you ask, the claim is either obviously true or obviously wrong. Stephen A. Smith's response was revealing. He did not say James was wrong about the statistics, or that his championships did not add up. He said, "The man is addicted to trying to control the narrative" [@fadeaway2026; @sportscasting]. The accusation was not about data at all. It was about storytelling, and about who controls the victory narrative.
+
+Smith does not play basketball. He never has. Yet he is one of the most powerful sports narrators alive, and his verdict on Jordan versus LeBron carries more weight in public discourse than any statistic. His version of greatness shapes what millions of people believe.
+
+I argue that Smith described the oldest accusation in sports history. In antiquity, Pindar and the other authors who celebrated Olympic victors were paid to do exactly what James and Smith are doing: control the narrative, frame the legacy, and make sure their version of a victory was the one that survived.
+
+This paper makes three contributions. First, it places the modern GOAT debate inside that much older tension between narrative and record. Second, it takes the ancient definition of victory, beating the man next to you rather than the clock, and turns it into a measurement: a within-race dominance score for every finalist in `r n_finals_total` Olympic and World Championship men's 100m finals. I show that this score removes race-level confounders by the same logic as fixed effects. Third, it documents every choice behind the measurement, because those choices are where the narrative hides.
+
+
+
+### Pindar and the business of narrative
+
+When Pindar was commissioned to write a victory ode, he was not documenting a result; he was manufacturing one. Odes were built to travel and were often performed weeks after the victory, so the version that survived was the poet's [@kuleuven]. This is why we remember Pindar's Hieron more vividly than the historical Hieron of Syracuse. The poet, not the race, decided what the victory meant.
+
+### The empty scoreboard
+
+There was no record-keeping of performance at the ancient Olympics. The Greeks had systems for judging competition, but they deliberately chose not to measure athletic performance [@greeceis; @miller2004]. Athletic excellence was qualitative: you either had it or you did not, and the best man won. Victory meant beating the man next to you, not the clock.
+
+### From champion to god
+
+Theagenes of Thasos is the clearest example of where this leads. He reportedly won around 1,400 bouts across a 22-year career, which makes him arguably the most dominant athlete of the ancient world. After his death, his statue became a site of worship, effectively declaring him a god [@greekreporter2025]. The ancient world resolved its GOAT debates by raising the hero to divine status.
+
+That is what the modern GOAT debate is still reaching toward. Jordan fans do not just think he was the best basketball player; they think he was something beyond human. And sports media is more than happy to sell that narrative, because it is the product. Smith is not paid to recite statistics. He is paid to tell a story.
+
+### Faster, higher, stronger
+
+In 1896, the modern Olympic movement organized itself around *Citius, Altius, Fortius*: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: *Who is the greatest of all time? Compared to who? Compared to when?*
+
+### Can greatness be quantified?
+
+Measurement does not end the argument. In a 2026 study, sixteen sports scientists set out to build a data-driven ranking of the greatest runners at the Olympic Games and World Championships [@hanley2026]. Before the study, an informal survey of 63 coaches, athletes and sport scientists at a 2024 conference showed that even the experts did not agree on the criteria. The authors concluded that "no manner of performing such a ranking task can be perfect or completely objective." Change the era, and you change the winner. A ranking table looks like a set of numbers, but it is really a narrative choice. And if scientists cannot agree on what greatness means in running, a sport with a clock, the basketball debate never stood a chance [@nelson].
+
+### The question I ask
+
+So I narrow the question. Instead of asking who is the greatest, I return to the ancient definition of victory and ask who most dominated **the runners next to them**. Then I make every choice behind the answer visible.
+
 ## Conclusion
 
 The ancient Greeks did not measure athletic performance; they let the poets decide. The modern Olympics promised to replace the poet with the clock. This paper shows that the clock does not settle the question either, but that measurement can recover something the ancient world valued: how far you beat the people next to you. By that standard, `r top_career$Competitor` is the most dominant 100m sprinter of the championship era.
 
 The GOAT debate is probably never going to be solved, and the deeper question was never really about the numbers. It is the question I left with the faculty in Athens: **who is defining greatness for you?**
+
+
+## About This Project {.unnumbered}
+
+This paper grew out of my final presentation for **CLCV OC3330: Ancient and Modern Olympics** (Columbia University, Summer 2026), which I delivered to faculty in Athens, Greece, after six weeks of on-site research. In Athens, I argued that the GOAT debate is really a fight over who controls the victory narrative. Here, I take the next step: I build the measurement that the ancient Greeks chose not to, and I ask what it can and cannot tell us.
+
 
 ## Data and Code Availability {.unnumbered}
 
