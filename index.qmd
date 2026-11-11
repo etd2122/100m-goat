@@ -341,8 +341,6 @@ thompson  <- shrink |> filter(Competitor == "Kishane Thompson")
 
 Three results follow. First, `r top_career$Competitor` is first under `r n_first` of `r n_specs` specifications and second under the rest, so the top of the ranking holds. Second, first place is not settled. With annulled runs removed, `r lewis_ann$Competitor[1]` edges ahead (`r fmt(lewis_ann$mean_score[1])` against `r fmt(lewis_ann$mean_score[2])`), because Ben Johnson finished ahead of him in both 1987 and 1988, and taking Johnson out of those races raises Lewis's score. That gap is too small to separate them. Third, the order below the top two depends on the specification. The median-based score puts `r mad_top$Competitor[1]` first and `r mad_top$Competitor[3]` third, each on two finals. With only seven other finishers per race the MAD is itself noisy, so I read this as a sign of fragility, not as a better ranking. Shrinkage moves `r thompson$Competitor` from eighth to `r thompson$rank` for the same reason: two finals are not much evidence.
 
-## Applying the Method to Baseball {#sec-baseball}
-
 ```{r}
 #| label: era-setup
 #| include: false
@@ -361,6 +359,7 @@ if (era_ok) {
 #| output: asis
 #| echo: false
 if (era_ok) {
+  cat("## Applying the Method to Baseball {#sec-baseball}\n\n")
   cat(sprintf(
 "Baseball already adjusts for context. ERA+ divides the league's ERA by a pitcher's ERA and corrects for his home park, so a 2.50 ERA in a high-scoring year counts for more than the same ERA in a low one. The dominance score answers a related question: how far was a pitcher ahead of the other good pitchers in his league that season? I applied the same leave-one-out z-score to every ERA-title qualifier in the American and National Leagues from %d to %d (%s pitcher-seasons, from the Lahman database), scoring each against the other qualifiers in his league that year (code in `R/04_era_demo.R`).
 
@@ -369,9 +368,9 @@ The two measures rank pitcher-seasons almost the same way (Spearman correlation 
     n_field[1], n_field[2],
     paste0(paste(top_z$pitcher[1:4], paste0("(", top_z$yearID[1:4], ")"), collapse = ", "),
            " and ", top_z$pitcher[5], " (", top_z$yearID[5], ")")))
-} else {
-  cat("*Run `R/04_era_demo.R` to generate `data/processed/era_demo.csv`; this section is built from it.*")
 }
+# No era_demo.csv yet (R/04_era_demo.R not run): the whole section is left out,
+# rather than publishing a placeholder.
 ```
 
 ```{r}
@@ -393,7 +392,11 @@ ggplot(era, aes(x = ERA_plus, y = z)) +
   theme_goat()
 ```
 
-Where the analogy stops: ERA+ rests on a league of thousands of innings, while each sprint final has seven other runners. The baseball version works because its fields are large. The sprint version is the harder problem, which is why @sec-robust exists.
+```{r}
+#| output: asis
+#| echo: false
+if (era_ok) cat("Where the analogy stops: ERA+ rests on a league of thousands of innings, while each sprint final has seven other runners. The baseball version works because its fields are large. The sprint version is the harder problem, which is why @sec-robust exists.")
+```
 
 ## Discussion
 

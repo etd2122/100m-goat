@@ -254,11 +254,10 @@ window.Quarto = {
   <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">2</span> Methodology</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a></li>
   <li><a href="#sec-robust" id="toc-sec-robust" class="nav-link" data-scroll-target="#sec-robust"><span class="header-section-number">4</span> Robustness</a></li>
-  <li><a href="#sec-baseball" id="toc-sec-baseball" class="nav-link" data-scroll-target="#sec-baseball"><span class="header-section-number">5</span> Applying the Method to Baseball</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a></li>
-  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">7</span> Limitations</a></li>
-  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context"><span class="header-section-number">8</span> Context: Who Controls the Victory?</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a></li>
+  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">6</span> Limitations</a></li>
+  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context"><span class="header-section-number">7</span> Context: Who Controls the Victory?</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">8</span> Conclusion</a></li>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link" data-scroll-target="#about-this-project">About This Project</a></li>
   <li><a href="#data-and-code-availability" id="toc-data-and-code-availability" class="nav-link" data-scroll-target="#data-and-code-availability">Data and Code Availability</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -472,7 +471,7 @@ Usain Bolt ranks first on career dominance (mean 2.43 across 7 finals) and on si
 Caveat
 </dt>
 <dd>
-Most careers span two to six finals, so career averages carry wide uncertainty. Below first place the order moves with the scoring choice (<a href="#sec-limits" class="quarto-xref">Section&nbsp;7</a>).
+Most careers span two to six finals, so career averages carry wide uncertainty. Below first place the order moves with the scoring choice (<a href="#sec-limits" class="quarto-xref">Section&nbsp;6</a>).
 </dd>
 </dl>
 <p class="facts">
@@ -810,10 +809,6 @@ Table&nbsp;1: Career rank of the baseline top ten under each specification. A da
 </div>
 </div>
 <p>Three results follow. First, Usain Bolt is first under 4 of 6 specifications and second under the rest, so the top of the ranking holds. Second, first place is not settled. With annulled runs removed, Carl Lewis edges ahead (2.46 against 2.43), because Ben Johnson finished ahead of him in both 1987 and 1988, and taking Johnson out of those races raises Lewis’s score. That gap is too small to separate them. Third, the order below the top two depends on the specification. The median-based score puts Valeriy Borzov first and Allan Wells third, each on two finals. With only seven other finishers per race the MAD is itself noisy, so I read this as a sign of fragility, not as a better ranking. Shrinkage moves Kishane Thompson from eighth to 12 for the same reason: two finals are not much evidence.</p>
-</section>
-<section id="sec-baseball" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-baseball"><span class="header-section-number">5</span> Applying the Method to Baseball</h2>
-<p><em>Run <code>R/04_era_demo.R</code> to generate <code>data/processed/era_demo.csv</code>; this section is built from it.</em></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show code</summary>
@@ -829,17 +824,16 @@ Table&nbsp;1: Career rank of the baseline top ten under each specification. A da
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Where the analogy stops: ERA+ rests on a league of thousands of innings, while each sprint final has seven other runners. The baseball version works because its fields are large. The sprint version is the harder problem, which is why <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a> exists.</p>
 </section>
-<section id="discussion" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="discussion"><span class="header-section-number">6</span> Discussion</h2>
+<section id="discussion" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="discussion"><span class="header-section-number">5</span> Discussion</h2>
 <p>The numbers and the narrative mostly agree: Usain Bolt ranks first on both career and single-race dominance, and is never lower than second under any specification in <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a>. So does the 2026 ranking by <span class="citation" data-cites="hanley2026">Hanley et al. (<a href="#ref-hanley2026" role="doc-biblioref">2026</a>)</span>, which used an entirely different method, counting medals and world records, and also placed Bolt first. When two methods built on different definitions of greatness reach the same answer, that agreement means something. What it does not settle is the gap to Lewis, which disappears once Johnson’s annulled races are removed.</p>
 <p>But look closely at what the score rewards. Bolt’s world-record 9.58 at Berlin 2009 scores 1.98, far below his 9.69 at Beijing 2008 (5.18). One slower finisher in 2009 widened the field’s spread and shrank his margin in standardized terms. By this measure, his fastest race was not his most dominant one. That is not a flaw in the score; it is the ancient definition doing exactly what it says. The Greeks did not care about the clock either.</p>
 <p>And every result in this paper rests on choices I made: to count races as they were run, to set injured runners aside, to compare athletes only with their own fields. Each is defensible. None is objective. The modern scoreboard did not remove the narrator; it moved the narrator into the method. The only honest response is to show every choice, which is what <a href="#sec-methods" class="quarto-xref">Section&nbsp;2</a> does.</p>
 <p>Anyone who has sat at a family dinner table and been told, with complete certainty, that athletes today are soft, and that nobody could touch Jordan, knows that no statistic will change that person’s mind. They are not remembering a performance; they are remembering a story. Maybe that is what makes sports worth arguing about. Pindar told you who won, and you believed him. We have more information than any fans in history, and we still cannot agree. That is not because we are irrational. It is because greatness is genuinely contested, and the debate forces each of us to define what we value: rings or longevity, dominance or consistency, the era we watched or the one we did not. For the media, the debate never being solved is not a failure. It is the business model.</p>
 </section>
-<section id="sec-limits" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="sec-limits"><span class="header-section-number">7</span> Limitations</h2>
+<section id="sec-limits" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-limits"><span class="header-section-number">6</span> Limitations</h2>
 <ul>
 <li><strong>Field strength is not controlled.</strong> As <a href="#eq-diff" class="quarto-xref">Equation&nbsp;4</a> shows, race effects cancel, but the ability of the other finalists does not. Weaker fields, including those affected by the 1980 and 1984 boycotts, inflate scores.</li>
 <li><strong>Sensitivity to spread.</strong> Because the score is scaled by the field’s standard deviation, one outlying finisher can noticeably change everyone else’s score. The median-based check in <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a> shows how much the order below the top two depends on this.</li>
@@ -847,40 +841,40 @@ Table&nbsp;1: Career rank of the baseline top ten under each specification. A da
 <li><strong>Scope.</strong> I analyze only championship finals, not heats, semifinals or other elite races.</li>
 </ul>
 </section>
-<section id="sec-context" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="sec-context"><span class="header-section-number">8</span> Context: Who Controls the Victory?</h2>
+<section id="sec-context" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-context"><span class="header-section-number">7</span> Context: Who Controls the Victory?</h2>
 <p>In June 2026, LeBron James told TIME magazine that he would not put anyone above himself as the greatest of all time: “I’m not taking nobody over me. There’s no question” <span class="citation" data-cites="espn2026">(<a href="#ref-espn2026" role="doc-biblioref">ESPN, 2026</a>)</span>. Depending on who you ask, the claim is either obviously true or obviously wrong. Stephen A. Smith’s response was revealing. He did not say James was wrong about the statistics, or that his championships did not add up. He said, “The man is addicted to trying to control the narrative” <span class="citation" data-cites="fadeaway2026 sportscasting">(<a href="#ref-fadeaway2026" role="doc-biblioref">Fadeaway World, 2026</a>; <a href="#ref-sportscasting" role="doc-biblioref">Sportscasting, n.d.</a>)</span>. The accusation was not about data at all. It was about storytelling, and about who controls the victory narrative.</p>
 <p>Smith does not play basketball. He never has. Yet he is one of the most powerful sports narrators alive, and his verdict on Jordan versus LeBron carries more weight in public discourse than any statistic. His version of greatness shapes what millions of people believe.</p>
 <p>I argue that Smith described the oldest accusation in sports history. In antiquity, Pindar and the other authors who celebrated Olympic victors were paid to do exactly what James and Smith are doing: control the narrative, frame the legacy, and make sure their version of a victory was the one that survived.</p>
 <p>This paper makes three contributions. First, it places the modern GOAT debate inside that much older tension between narrative and record. Second, it takes the ancient definition of victory, beating the man next to you rather than the clock, and turns it into a measurement: a within-race dominance score for every finalist in 35 Olympic and World Championship men’s 100m finals. I show that this score removes race-level confounders by the same logic as fixed effects. Third, it documents every choice behind the measurement, because those choices are where the narrative hides.</p>
-<section id="pindar-and-the-business-of-narrative" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="pindar-and-the-business-of-narrative"><span class="header-section-number">8.1</span> Pindar and the business of narrative</h3>
+<section id="pindar-and-the-business-of-narrative" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="pindar-and-the-business-of-narrative"><span class="header-section-number">7.1</span> Pindar and the business of narrative</h3>
 <p>When Pindar was commissioned to write a victory ode, he was not documenting a result; he was manufacturing one. Odes were built to travel and were often performed weeks after the victory, so the version that survived was the poet’s <span class="citation" data-cites="kuleuven">(<a href="#ref-kuleuven" role="doc-biblioref">KU Leuven, n.d.</a>)</span>. This is why we remember Pindar’s Hieron more vividly than the historical Hieron of Syracuse. The poet, not the race, decided what the victory meant.</p>
 </section>
-<section id="the-empty-scoreboard" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="the-empty-scoreboard"><span class="header-section-number">8.2</span> The empty scoreboard</h3>
+<section id="the-empty-scoreboard" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="the-empty-scoreboard"><span class="header-section-number">7.2</span> The empty scoreboard</h3>
 <p>There was no record-keeping of performance at the ancient Olympics. The Greeks had systems for judging competition, but they deliberately chose not to measure athletic performance <span class="citation" data-cites="greeceis miller2004">(<a href="#ref-greeceis" role="doc-biblioref">Greece Is, n.d.</a>; <a href="#ref-miller2004" role="doc-biblioref">Miller, 2004</a>)</span>. Athletic excellence was qualitative: you either had it or you did not, and the best man won. Victory meant beating the man next to you, not the clock.</p>
 </section>
-<section id="from-champion-to-god" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="from-champion-to-god"><span class="header-section-number">8.3</span> From champion to god</h3>
+<section id="from-champion-to-god" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="from-champion-to-god"><span class="header-section-number">7.3</span> From champion to god</h3>
 <p>Theagenes of Thasos is the clearest example of where this leads. He reportedly won around 1,400 bouts across a 22-year career, which makes him arguably the most dominant athlete of the ancient world. After his death, his statue became a site of worship, effectively declaring him a god <span class="citation" data-cites="greekreporter2025">(<a href="#ref-greekreporter2025" role="doc-biblioref">Greek Reporter, 2025</a>)</span>. The ancient world resolved its GOAT debates by raising the hero to divine status.</p>
 <p>That is what the modern GOAT debate is still reaching toward. Jordan fans do not just think he was the best basketball player; they think he was something beyond human. And sports media is more than happy to sell that narrative, because it is the product. Smith is not paid to recite statistics. He is paid to tell a story.</p>
 </section>
-<section id="faster-higher-stronger" class="level3" data-number="8.4">
-<h3 data-number="8.4" class="anchored" data-anchor-id="faster-higher-stronger"><span class="header-section-number">8.4</span> Faster, higher, stronger</h3>
+<section id="faster-higher-stronger" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="faster-higher-stronger"><span class="header-section-number">7.4</span> Faster, higher, stronger</h3>
 <p>In 1896, the modern Olympic movement organized itself around <em>Citius, Altius, Fortius</em>: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: <em>Who is the greatest of all time? Compared to who? Compared to when?</em></p>
 </section>
-<section id="can-greatness-be-quantified" class="level3" data-number="8.5">
-<h3 data-number="8.5" class="anchored" data-anchor-id="can-greatness-be-quantified"><span class="header-section-number">8.5</span> Can greatness be quantified?</h3>
+<section id="can-greatness-be-quantified" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="can-greatness-be-quantified"><span class="header-section-number">7.5</span> Can greatness be quantified?</h3>
 <p>Measurement does not end the argument. In a 2026 study, sixteen sports scientists set out to build a data-driven ranking of the greatest runners at the Olympic Games and World Championships <span class="citation" data-cites="hanley2026">(<a href="#ref-hanley2026" role="doc-biblioref">Hanley et al., 2026</a>)</span>. Before the study, an informal survey of 63 coaches, athletes and sport scientists at a 2024 conference showed that even the experts did not agree on the criteria. The authors concluded that “no manner of performing such a ranking task can be perfect or completely objective.” Change the era, and you change the winner. A ranking table looks like a set of numbers, but it is really a narrative choice. And if scientists cannot agree on what greatness means in running, a sport with a clock, the basketball debate never stood a chance <span class="citation" data-cites="nelson">(<a href="#ref-nelson" role="doc-biblioref">Nelson, n.d.</a>)</span>.</p>
 </section>
-<section id="the-question-i-ask" class="level3" data-number="8.6">
-<h3 data-number="8.6" class="anchored" data-anchor-id="the-question-i-ask"><span class="header-section-number">8.6</span> The question I ask</h3>
+<section id="the-question-i-ask" class="level3" data-number="7.6">
+<h3 data-number="7.6" class="anchored" data-anchor-id="the-question-i-ask"><span class="header-section-number">7.6</span> The question I ask</h3>
 <p>So I narrow the question. Instead of asking who is the greatest, I return to the ancient definition of victory and ask who most dominated <strong>the runners next to them</strong>. Then I make every choice behind the answer visible.</p>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">9</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">8</span> Conclusion</h2>
 <p>The ancient Greeks did not measure athletic performance; they let the poets decide. The modern Olympics promised to replace the poet with the clock. This paper shows that the clock does not settle the question either, but that measurement can recover something the ancient world valued: how far you beat the people next to you. By that standard, Usain Bolt is the most dominant 100m sprinter of the championship era.</p>
 <p>The GOAT debate is probably never going to be solved, and the deeper question was never really about the numbers. It is the question I left with the faculty in Athens: <strong>who is defining greatness for you?</strong></p>
 </section>
