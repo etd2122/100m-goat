@@ -26,7 +26,6 @@ format:
     code-fold: true
     code-summary: "Show code"
     fig-align: center
-    include-after-body: plotly-resize.html
 
 execute:
   warning: false

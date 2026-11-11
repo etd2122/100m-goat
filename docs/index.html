@@ -2,20 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Emelia Davis">
-<meta name="dcterms.date" content="2026-11-08">
+<meta name="dcterms.date" content="2026-11-10">
 <meta name="keywords" content="sports analytics, ancient Olympics, sprinting, sports media, fixed effects, omitted variable bias">
-<meta name="description" content="Every GOAT debate is a fight over who controls the victory narrative. In antiquity, poets like Pindar were paid to decide which victories survived; today, sports media plays the same role. The ancient Greeks never measured athletic performance: victory meant beating the man next to you, not the clock. In this paper, I argue that this ancient definition of victory can be recovered with modern measurement. Using all 35 men’s 100m finals at the Olympic Games (1968–2024) and World Athletics Championships (1983–2025), I score every finalist by how far they beat the other runners in their own race. I show that this within-race comparison removes race-level confounders such as wind, altitude, track and era by the same logic as fixed effects, while leaving field strength uncontrolled. Usain Bolt ranks first on career dominance (mean score 2.43 across 7 finals) and on single-race dominance (Beijing 2008, score 5.18). Even so, every choice behind the number is a narrative choice, and I document each one.">
+<meta name="description" content="Every GOAT debate is a fight over who controls the victory narrative. In antiquity, poets like Pindar were paid to decide which victories survived; today, sports media plays the same role. The ancient Greeks never measured athletic performance: victory meant beating the man next to you, not the clock. In this paper, I argue that this ancient definition of victory can be recovered with modern measurement. Using all 35 men’s 100m finals at the Olympic Games (1968–2024) and World Athletics Championships (1983–2025), I score every finalist by how far they beat the other runners in their own race. I show that this within-race comparison removes race-level confounders such as wind, altitude, track and era by the same logic as fixed effects, while leaving field strength uncontrolled. Usain Bolt ranks first on career dominance (mean score 2.43 across 7 finals) and on single-race dominance (Beijing 2008, score 5.18), and is first under four of six alternative scoring choices and second under the other two. Even so, every choice behind the number is a narrative choice, and I document each one.">
 
 <title>Who Is Defining Greatness? – 100m GOAT</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,9 +25,8 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -41,7 +37,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -92,16 +88,15 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-96ebe82b8db4e1070ca8c51563aaef74.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df7d5d9bf84f4bb279b6d618a01b4b62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b3d0f4553bb5d48ef94e052c5ed32e4d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -130,17 +125,9 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="site_libs/plotly-binding-4.12.1/plotly.js"></script>
-<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -153,7 +140,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -171,7 +158,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -213,7 +200,7 @@ window.Quarto = {
             <p class="subtitle lead">Narrative, Measurement, and Dominance in Olympic and World Championship 100m Finals, 1968–2025</p>
                   <div>
         <div class="description">
-          <p>Every GOAT debate is a fight over who controls the victory narrative. In antiquity, poets like Pindar were paid to decide which victories survived; today, sports media plays the same role. The ancient Greeks never measured athletic performance: victory meant beating the man next to you, not the clock. In this paper, I argue that this ancient definition of victory can be recovered with modern measurement. Using all 35 men’s 100m finals at the Olympic Games (1968–2024) and World Athletics Championships (1983–2025), I score every finalist by how far they beat the other runners in their own race. I show that this within-race comparison removes race-level confounders such as wind, altitude, track and era by the same logic as fixed effects, while leaving field strength uncontrolled. Usain Bolt ranks first on career dominance (mean score 2.43 across 7 finals) and on single-race dominance (Beijing 2008, score 5.18). Even so, every choice behind the number is a narrative choice, and I document each one.</p>
+          <p>Every GOAT debate is a fight over who controls the victory narrative. In antiquity, poets like Pindar were paid to decide which victories survived; today, sports media plays the same role. The ancient Greeks never measured athletic performance: victory meant beating the man next to you, not the clock. In this paper, I argue that this ancient definition of victory can be recovered with modern measurement. Using all 35 men’s 100m finals at the Olympic Games (1968–2024) and World Athletics Championships (1983–2025), I score every finalist by how far they beat the other runners in their own race. I show that this within-race comparison removes race-level confounders such as wind, altitude, track and era by the same logic as fixed effects, while leaving field strength uncontrolled. Usain Bolt ranks first on career dominance (mean score 2.43 across 7 finals) and on single-race dominance (Beijing 2008, score 5.18), and is first under four of six alternative scoring choices and second under the other two. Even so, every choice behind the number is a narrative choice, and I document each one.</p>
         </div>
       </div>
                 </div>
@@ -239,7 +226,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 8, 2026</p>
+        <p class="date">November 10, 2026</p>
       </div>
     </div>
     
@@ -266,10 +253,12 @@ window.Quarto = {
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">1</span> Data</a></li>
   <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">2</span> Methodology</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a></li>
-  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">5</span> Limitations</a></li>
-  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context"><span class="header-section-number">6</span> Context: Who Controls the Victory?</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">7</span> Conclusion</a></li>
+  <li><a href="#sec-robust" id="toc-sec-robust" class="nav-link" data-scroll-target="#sec-robust"><span class="header-section-number">4</span> Robustness</a></li>
+  <li><a href="#sec-baseball" id="toc-sec-baseball" class="nav-link" data-scroll-target="#sec-baseball"><span class="header-section-number">5</span> Applying the Method to Baseball</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">6</span> Discussion</a></li>
+  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">7</span> Limitations</a></li>
+  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context"><span class="header-section-number">8</span> Context: Who Controls the Victory?</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link" data-scroll-target="#about-this-project">About This Project</a></li>
   <li><a href="#data-and-code-availability" id="toc-data-and-code-availability" class="nav-link" data-scroll-target="#data-and-code-availability">Data and Code Availability</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -283,6 +272,180 @@ window.Quarto = {
 
 
 
+<div class="board" role="region" aria-label="Career dominance, top five">
+<p class="board-title">
+Career dominance in Olympic and World Championship finals, 1968–2025
+</p>
+<table>
+<thead>
+<tr>
+<th scope="col">
+Rank
+</th>
+<th scope="col">
+Athlete
+</th>
+<th scope="col">
+Nation
+</th>
+<th scope="col" class="num">
+Mean score
+</th>
+<th scope="col" class="num">
+Finals
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="pos">
+1
+</td>
+<td class="who">
+Usain Bolt
+</td>
+<td class="nat">
+JAM
+</td>
+<td class="num">
+2.43
+</td>
+<td class="num">
+7
+</td>
+</tr>
+<tr>
+<td class="pos">
+2
+</td>
+<td class="who">
+Carl Lewis
+</td>
+<td class="nat">
+USA
+</td>
+<td class="num">
+2.01
+</td>
+<td class="num">
+6
+</td>
+</tr>
+<tr>
+<td class="pos">
+3
+</td>
+<td class="who">
+Ben Johnson *
+</td>
+<td class="nat">
+CAN
+</td>
+<td class="num">
+1.82
+</td>
+<td class="num">
+3
+</td>
+</tr>
+<tr>
+<td class="pos">
+4
+</td>
+<td class="who">
+Valeriy Borzov
+</td>
+<td class="nat">
+URS
+</td>
+<td class="num">
+1.82
+</td>
+<td class="num">
+2
+</td>
+</tr>
+<tr>
+<td class="pos">
+5
+</td>
+<td class="who">
+Maurice Greene
+</td>
+<td class="nat">
+USA
+</td>
+<td class="num">
+1.79
+</td>
+<td class="num">
+5
+</td>
+</tr>
+</tbody>
+</table>
+<p class="board-note">
+Usain Bolt is first under 4 of 6 ways of scoring and in the top two under all 6. Removing doping-annulled runs puts Carl Lewis first; a median-based score puts Valeriy Borzov first. * Includes results later annulled for doping.
+</p>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw rank: every career (2+ finals) ranked by average finishing time.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> scores <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Competitor) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_time =</span> <span class="fu">mean</span>(time), <span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;=</span> <span class="dv">2</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">raw_rank =</span> <span class="fu">rank</span>(mean_time, <span class="at">ties.method =</span> <span class="st">"min"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>hero <span class="ot">&lt;-</span> career <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(raw, <span class="at">by =</span> <span class="st">"Competitor"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">label    =</span> <span class="fu">paste0</span>(Competitor, <span class="fu">if_else</span>(has_annulled, <span class="st">" *"</span>, <span class="st">""</span>)),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">raw_pos  =</span> <span class="fu">rank</span>(raw_rank, <span class="at">ties.method =</span> <span class="st">"first"</span>),  <span class="co"># order among these ten</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">adj_pos  =</span> rank,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">move     =</span> <span class="fu">case_when</span>(adj_pos <span class="sc">&lt;</span> raw_pos <span class="sc">~</span> <span class="st">"Ranks higher once era is removed"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                         adj_pos <span class="sc">&gt;</span> raw_pos <span class="sc">~</span> <span class="st">"Ranks lower once era is removed"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                         <span class="cn">TRUE</span>              <span class="sc">~</span> <span class="st">"Same position"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hero) <span class="sc">+</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">1</span>, <span class="at">y =</span> raw_pos, <span class="at">yend =</span> adj_pos, <span class="at">colour =</span> move),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">linewidth =</span> <span class="fl">1.1</span>, <span class="at">lineend =</span> <span class="st">"round"</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> raw_pos, <span class="at">colour =</span> move), <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> adj_pos, <span class="at">colour =</span> move), <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">-</span><span class="fl">0.04</span>, <span class="at">y =</span> raw_pos,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                <span class="at">label =</span> <span class="fu">paste0</span>(label, <span class="st">"  "</span>, <span class="fu">sprintf</span>(<span class="st">"%.2fs"</span>, mean_time), <span class="st">"  #"</span>, raw_rank)),</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="fl">3.6</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">1.04</span>, <span class="at">y =</span> adj_pos, <span class="at">label =</span> <span class="fu">paste0</span>(adj_pos, <span class="st">"  "</span>, label)),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="fl">3.6</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fl">0.2</span>, <span class="at">label =</span> <span class="st">"By average time"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">3.8</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="fl">0.2</span>, <span class="at">label =</span> <span class="st">"By dominance score"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">3.8</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Ranks higher once era is removed"</span> <span class="ot">=</span> goat_cols[[<span class="st">"track"</span>]],</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Ranks lower once era is removed"</span>  <span class="ot">=</span> goat_cols[[<span class="st">"grey"</span>]],</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Same position"</span>                     <span class="ot">=</span> goat_cols[[<span class="st">"ink"</span>]])) <span class="sc">+</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_reverse</span>() <span class="sc">+</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.15</span>, <span class="fl">1.75</span>)) <span class="sc">+</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>() <span class="sc">+</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(), <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Slope chart of the ten best careers. Usain Bolt is first by both average time and dominance. Valeriy Borzov moves from the slowest average time of the ten to fourth by dominance, and Carl Lewis from ninth of the ten to second. Kishane Thompson, Fred Kerley and Noah Lyles, the fastest by raw time after Bolt, fall to eighth, ninth and tenth.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-hero-1.png" class="img-fluid figure-img" alt="Slope chart of the ten best careers. Usain Bolt is first by both average time and dominance. Valeriy Borzov moves from the slowest average time of the ten to fourth by dominance, and Carl Lewis from ninth of the ten to second. Kishane Thompson, Fred Kerley and Noah Lyles, the fastest by raw time after Bolt, fall to eighth, ninth and tenth." width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Raw time against era-adjusted rank. Left: the ten best careers by dominance, ordered by their average finishing time, with each runner’s rank by average time among all 60 athletes with two or more finals. Right: the same runners ordered by mean dominance score. Blue lines rank higher once race conditions and era are removed. * Includes results later annulled for doping.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <section id="at-a-glance" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="at-a-glance">At a Glance</h2>
 <div class="glance">
@@ -303,28 +466,22 @@ A leave-one-out z-score inside each final: how many standard deviations a runner
 Finding
 </dt>
 <dd>
-Usain Bolt ranks first on career dominance (mean 2.43 across 7 finals) and on single-race dominance (Olympic Games 2008, 5.18).
+Usain Bolt ranks first on career dominance (mean 2.43 across 7 finals) and on single-race dominance (Olympic Games 2008, 5.18). He is first under 4 of 6 scoring choices and never lower than second (<a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a>).
 </dd>
 <dt>
 Caveat
 </dt>
 <dd>
-Most careers span two to six finals, so career averages carry wide uncertainty and the order below first place is noisy (<a href="#sec-limits" class="quarto-xref">Section&nbsp;5</a>).
+Most careers span two to six finals, so career averages carry wide uncertainty. Below first place the order moves with the scoring choice (<a href="#sec-limits" class="quarto-xref">Section&nbsp;7</a>).
 </dd>
 </dl>
 <p class="facts">
-35 finals · 270 scored performances · 127 athletes · Olympic Games 1968–2024, World Championships 1983–2025
+35 finals, 270 scored performances and 127 athletes. Olympic Games 1968–2024, World Championships 1983–2025.
 </p>
 </div>
 <div class="link-row">
 <p><a href="https://github.com/etd2122/100m-goat" class="btn btn-primary" role="button" target="_blank">Code and data on GitHub</a> <a href="https://docs.google.com/presentation/d/15JcPSdAi1Mbq-asNEOIS1xl9LPjafGVmoq-BmM_cRKI" class="btn btn-outline-secondary" role="button" target="_blank">Original Athens presentation</a> <a href="https://www.linkedin.com/in/emelia-davis" class="btn btn-outline-secondary" role="button" target="_blank">LinkedIn</a></p>
 </div>
-<!-- DRAFT for Emmy: rewrite in your own words before merging, or delete.
-::: {.callout-note appearance="simple"}
-## Why a baseball analyst should care
-The score does for a sprint final what ERA+ or wRC+ does for a season: it judges a performance against the environment it happened in, not against a raw number. The open problem is the same one baseball faces with small samples. A sprinter with two finals is a hitter with 50 plate appearances, and the robustness section shows how much the ranking moves when that noise is taken seriously.
-:::
--->
 </section>
 <section id="data" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="data"><span class="header-section-number">1</span> Data</h2>
@@ -376,7 +533,7 @@ t_{ir} = \alpha_r + \theta_i + \varepsilon_{ir}
 <li><strong>Doping-annulled performances</strong> (Ben Johnson 1987 and 1988; Tim Montgomery 2001 and 2003; Dwain Chambers 2003; Tyson Gay 2012) are kept and flagged. These athletes were in the race, and the race everyone else ran included them.</li>
 <li><strong>Injured finishers</strong> (Pierfrancesco Pavoni 1987, 16.23s; Ray Stewart 1988, 12.26s; Nesta Carter 2011, 10.95s; Asafa Powell 2012, 11.99s) are excluded from field statistics. Their times reflect injury, not ability, and including them would inflate <span class="math inline">\(s_{-i,r}\)</span> and shrink everyone else’s score. Carter’s injury is not recorded in the source; I reclassified him because he finished 0.68 seconds behind sixth place.</li>
 <li><strong>Disqualified and non-finishing athletes</strong> have no time and are not scored.</li>
-<li><strong>Career rankings</strong> average each athlete’s scores and require at least two finals, so one great race cannot top a career list.</li>
+<li><strong>Career rankings</strong> average each athlete’s scores and require at least two finals, so one great race cannot top a career list. I did not raise the minimum to three: before 1983 there was only one championship final every four years, so a three-final rule would exclude every athlete who debuted before then. <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a> shows the three-final ranking.</li>
 </ul>
 </section>
 </section>
@@ -384,7 +541,7 @@ t_{ir} = \alpha_r + \theta_i + \varepsilon_{ir}
 <h2 data-number="3" class="anchored" data-anchor-id="results"><span class="header-section-number">3</span> Results</h2>
 <section id="single-race-dominance" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="single-race-dominance"><span class="header-section-number">3.1</span> Single-race dominance</h3>
-<p><a href="#fig-best-race" class="quarto-xref">Figure&nbsp;1</a> shows each athlete’s most dominant final. Usain Bolt’s win at the 2008 Olympic Games is the most dominant performance in the sample (score 5.18), followed by Carl Lewis (1984, 4.98) and Justin Gatlin (2005, 4.05).</p>
+<p><a href="#fig-best-race" class="quarto-xref">Figure&nbsp;2</a> shows each athlete’s most dominant final. Usain Bolt’s win at the 2008 Olympic Games is the most dominant performance in the sample (score 5.18), followed by Carl Lewis (1984, 4.98) and Justin Gatlin (2005, 4.05).</p>
 <!-- PASTE YOUR BOLT IMAGE LINE ON THE LINE BELOW -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -395,185 +552,335 @@ t_{ir} = \alpha_r + \theta_i + \varepsilon_{ir}
 <div class="cell">
 <details class="code-fold">
 <summary>Show code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>top15 <span class="ot">&lt;-</span> best_race <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">factor</span>(<span class="fu">paste0</span>(Competitor, <span class="st">" ("</span>, year, <span class="st">")"</span>),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">paste0</span>(Competitor, <span class="st">" ("</span>, year, <span class="st">")"</span>))),</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">flag  =</span> <span class="fu">if_else</span>(status <span class="sc">==</span> <span class="st">"annulled"</span>, <span class="st">"Result later annulled"</span>, <span class="st">"Official result"</span>),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">tip   =</span> <span class="fu">paste0</span>(<span class="st">"&lt;b&gt;"</span>, Competitor, <span class="st">"&lt;/b&gt; ("</span>, Nat, <span class="st">")&lt;br&gt;"</span>, year, <span class="st">" "</span>, competition,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"&lt;br&gt;Time: "</span>, <span class="fu">fmt</span>(time), <span class="st">"s"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"&lt;br&gt;Score: "</span>, <span class="fu">fmt</span>(score),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">if_else</span>(status <span class="sc">==</span> <span class="st">"annulled"</span>, <span class="st">"&lt;br&gt;&lt;i&gt;Result annulled for doping&lt;/i&gt;"</span>, <span class="st">""</span>))</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(top15, <span class="fu">aes</span>(<span class="at">x =</span> score, <span class="at">y =</span> label, <span class="at">fill =</span> flag, <span class="at">text =</span> tip)) <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.72</span>) <span class="sc">+</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Official result"</span> <span class="ot">=</span> red,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Result later annulled"</span> <span class="ot">=</span> grey)) <span class="sc">+</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.05</span>))) <span class="sc">+</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Dominance score (standard deviations ahead of the field)"</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">fill =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  theme_goat <span class="sc">+</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">style_plotly</span>(p1, <span class="at">height =</span> <span class="dv">560</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>top15 <span class="ot">&lt;-</span> best_race <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">factor</span>(<span class="fu">paste0</span>(Competitor, <span class="st">" ("</span>, year, <span class="st">")"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">paste0</span>(Competitor, <span class="st">" ("</span>, year, <span class="st">")"</span>))),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">flag  =</span> <span class="fu">if_else</span>(status <span class="sc">==</span> <span class="st">"annulled"</span>, <span class="st">"Result later annulled"</span>, <span class="st">"Official result"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top15, <span class="fu">aes</span>(<span class="at">x =</span> score, <span class="at">y =</span> label, <span class="at">fill =</span> flag)) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.72</span>) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">fmt</span>(score)), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">3.3</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Official result"</span>       <span class="ot">=</span> goat_cols[[<span class="st">"ink"</span>]],</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Result later annulled"</span> <span class="ot">=</span> goat_cols[[<span class="st">"grey"</span>]])) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.08</span>))) <span class="sc">+</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Dominance score (standard deviations ahead of the field)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>() <span class="sc">+</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.x =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> goat_cols[[<span class="st">"rule"</span>]], <span class="at">linewidth =</span> <span class="fl">0.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-best-race" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell-output-display">
+<div id="fig-best-race" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Horizontal bar chart of the 15 most dominant single finals, led by Usain Bolt at Beijing 2008.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-best-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="htmlwidget-413f39cbf3751480dc67" style="width:100%;height:541px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-413f39cbf3751480dc67">{"x":{"data":[{"orientation":"v","width":[5.1826873769508666,4.9817561231436338,4.0532722304666935,3.3453335903316126,2.9880715233359711,2.7939646548165662,2.5150517301276318,2.1652287380818493,2.1189484488150359,2.0758128227613826,2.0758128227613826,2.0334764049022205,1.8126034655117085,1.6858874319324906],"base":[14.640000000000001,13.640000000000001,12.640000000000001,11.640000000000001,9.6400000000000006,8.6400000000000006,7.6399999999999997,6.6399999999999997,5.6399999999999997,4.6399999999999997,3.6400000000000001,2.6400000000000001,1.6400000000000001,0.64000000000000001],"x":[2.5913436884754333,2.4908780615718169,2.0266361152333467,1.6726667951658063,1.4940357616679856,1.3969823274082831,1.2575258650638159,1.0826143690409247,1.0594742244075179,1.0379064113806913,1.0379064113806913,1.0167382024511102,0.90630173275585424,0.84294371596624529],"y":[0.71999999999999886,0.71999999999999886,0.71999999999999886,0.71999999999999886,0.71999999999999886,0.71999999999999886,0.71999999999999975,0.72000000000000064,0.72000000000000064,0.72000000000000064,0.7200000000000002,0.71999999999999975,0.71999999999999975,0.71999999999999986],"text":["<b>Usain Bolt<\/b> (JAM)<br>2008 Olympic Games<br>Time: 9.69s<br>Score: 5.18","<b>Carl Lewis<\/b> (USA)<br>1984 Olympic Games<br>Time: 9.99s<br>Score: 4.98","<b>Justin Gatlin<\/b> (USA)<br>2005 World Championships<br>Time: 9.88s<br>Score: 4.05","<b>Maurice Greene<\/b> (USA)<br>2000 Olympic Games<br>Time: 9.87s<br>Score: 3.35","<b>Valeriy Borzov<\/b> (URS)<br>1972 Olympic Games<br>Time: 10.14s<br>Score: 2.99","<b>Christian Coleman<\/b> (USA)<br>2019 World Championships<br>Time: 9.76s<br>Score: 2.79","<b>Jim Hines<\/b> (USA)<br>1968 Olympic Games<br>Time: 9.95s<br>Score: 2.52","<b>Lamont Marcell Jacobs<\/b> (ITA)<br>2021 Olympic Games<br>Time: 9.80s<br>Score: 2.17","<b>Oblique Seville<\/b> (JAM)<br>2025 World Championships<br>Time: 9.77s<br>Score: 2.12","<b>Allan Wells<\/b> (GBR)<br>1980 Olympic Games<br>Time: 10.25s<br>Score: 2.08","<b>Silvio Leonard<\/b> (CUB)<br>1980 Olympic Games<br>Time: 10.25s<br>Score: 2.08","<b>Linford Christie<\/b> (GBR)<br>1993 World Championships<br>Time: 9.87s<br>Score: 2.03","<b>Tyson Gay<\/b> (USA)<br>2007 World Championships<br>Time: 9.85s<br>Score: 1.81","<b>Hasely Crawford<\/b> (TTO)<br>1976 Olympic Games<br>Time: 10.06s<br>Score: 1.69"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(200,16,46,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Official result","legendgroup":"Official result","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":3.015672991749986,"base":10.640000000000001,"x":[1.507836495874993],"y":[0.71999999999999886],"text":"<b>Ben Johnson<\/b> (CAN)<br>1988 Olympic Games<br>Time: 9.79s<br>Score: 3.02<br><i>Result annulled for doping<\/i>","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(160,164,168,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Result later annulled","legendgroup":"Result later annulled","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":50,"r":8.6342880863428828,"b":44.034869240348698,"l":206.35948526359488},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"Source Sans Pro, Helvetica, Arial, sans-serif","size":17.268576172685766},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0,5.4418217457984097],"tickmode":"array","ticktext":["0","1","2","3","4","5"],"tickvals":[0,1,2,3,4,5],"categoryorder":"array","categoryarray":["0","1","2","3","4","5"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662587,"zeroline":false,"anchor":"y","title":{"text":"Dominance score (standard deviations ahead of the field)","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,15.6],"tickmode":"array","ticktext":["Hasely Crawford (1976)","Tyson Gay (2007)","Linford Christie (1993)","Silvio Leonard (1980)","Allan Wells (1980)","Oblique Seville (2025)","Lamont Marcell Jacobs (2021)","Jim Hines (1968)","Christian Coleman (2019)","Valeriy Borzov (1972)","Ben Johnson (1988)","Maurice Greene (2000)","Justin Gatlin (2005)","Carl Lewis (1984)","Usain Bolt (2008)"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"categoryorder":"array","categoryarray":["Hasely Crawford (1976)","Tyson Gay (2007)","Linford Christie (1993)","Silvio Leonard (1980)","Allan Wells (1980)","Oblique Seville (2025)","Lamont Marcell Jacobs (2021)","Jim Hines (1968)","Christian Coleman (2019)","Valeriy Borzov (1972)","Ben Johnson (1988)","Maurice Greene (2000)","Justin Gatlin (2005)","Carl Lewis (1984)","Usain Bolt (2008)"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":13.814860938148611},"title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685766}},"orientation":"h","x":0,"y":1.1000000000000001},"hovermode":"closest","height":560,"barmode":"relative","hoverlabel":{"bgcolor":"white","bordercolor":"#d0d0d0","font":{"size":13}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"c17e52bef2":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"c17e52bef2","visdat":{"c17e52bef2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<img src="index_files/figure-html/fig-best-race-1.png" class="img-fluid figure-img" alt="Horizontal bar chart of the 15 most dominant single finals, led by Usain Bolt at Beijing 2008." width="768">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-best-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Each athlete’s single most dominant championship final (top 15). Grey bars indicate results later annulled for doping. Hover for details.
+Figure&nbsp;2: Each athlete’s single most dominant championship final (top 15). Grey bars indicate results later annulled for doping.
 </figcaption>
 </figure>
+</div>
 </div>
 </div>
 </section>
 <section id="career-dominance" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="career-dominance"><span class="header-section-number">3.2</span> Career dominance</h3>
-<p><a href="#fig-career" class="quarto-xref">Figure&nbsp;2</a> compares each athlete’s average score with the number of finals they ran. Usain Bolt ranks first (mean 2.43 across 7 finals), followed by Carl Lewis and Ben Johnson. Among the ten highest-ranked careers, one includes at least one annulled performance.</p>
+<p><a href="#fig-career" class="quarto-xref">Figure&nbsp;3</a> compares each athlete’s average score with the number of finals they ran. Usain Bolt ranks first (mean 2.43 across 7 finals), followed by Carl Lewis and Ben Johnson. Among the ten highest-ranked careers, one includes at least one annulled performance.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>career_plot <span class="ot">&lt;-</span> career <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">flag =</span> <span class="fu">if_else</span>(has_annulled, <span class="st">"Includes an annulled result"</span>, <span class="st">"All official results"</span>),</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">tip  =</span> <span class="fu">paste0</span>(<span class="st">"&lt;b&gt;"</span>, Competitor, <span class="st">"&lt;/b&gt; ("</span>, Nat, <span class="st">")"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"&lt;br&gt;Finals: "</span>, n_finals, <span class="st">"  |  Titles: "</span>, titles,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"&lt;br&gt;Mean score: "</span>, <span class="fu">fmt</span>(mean_score),</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"&lt;br&gt;Best score: "</span>, <span class="fu">fmt</span>(best_score))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(career_plot, <span class="fu">aes</span>(<span class="at">x =</span> n_finals, <span class="at">y =</span> mean_score, <span class="at">colour =</span> flag)) <span class="sc">+</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"grey80"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">text =</span> tip), <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> <span class="fu">slice_head</span>(career_plot, <span class="at">n =</span> <span class="dv">5</span>),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">label =</span> Competitor), <span class="at">nudge_y =</span> <span class="fl">0.18</span>, <span class="at">size =</span> <span class="fl">3.6</span>,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour =</span> <span class="st">"grey20"</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"All official results"</span> <span class="ot">=</span> navy,</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Includes an annulled result"</span> <span class="ot">=</span> amber)) <span class="sc">+</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Championship finals contested"</span>, <span class="at">y =</span> <span class="st">"Mean dominance score"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  theme_goat</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">style_plotly</span>(p2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>career_plot <span class="ot">&lt;-</span> career <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">flag =</span> <span class="fu">if_else</span>(has_annulled, <span class="st">"Includes an annulled result"</span>, <span class="st">"All official results"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(career_plot, <span class="fu">aes</span>(<span class="at">x =</span> n_finals, <span class="at">y =</span> mean_score, <span class="at">colour =</span> flag)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"grey"</span>]], <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.12</span>, <span class="at">height =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> <span class="fu">slice_head</span>(career_plot, <span class="at">n =</span> <span class="dv">5</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">label =</span> Competitor), <span class="at">nudge_x =</span> <span class="fl">0.2</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="fl">3.4</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]], <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"All official results"</span>        <span class="ot">=</span> goat_cols[[<span class="st">"track"</span>]],</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Includes an annulled result"</span> <span class="ot">=</span> goat_cols[[<span class="st">"grey"</span>]])) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">add =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">1.2</span>))) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Championship finals contested"</span>, <span class="at">y =</span> <span class="st">"Mean dominance score"</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-career" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell-output-display">
+<div id="fig-career" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatter plot of mean dominance score against finals contested; Usain Bolt and Carl Lewis sit highest among athletes with six or more finals.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-career-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="htmlwidget-2fa8f6bc30b1423043b9" style="width:100%;height:502px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2fa8f6bc30b1423043b9">{"x":{"data":[{"x":[1.7,8.3000000000000007],"y":[0,0],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(204,204,204,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7,6,2,5,8,3,2,3,3,2,2,4,6,5,2,2,2,5,6,2,4,2,5,2,4,2,5,2,2,2,2,6,3,6,2,7,2,3,3,2,2,4,2,4,3,3,2,6,2,3,2,2,3,2,2,2],"y":[2.4347204066171981,2.0090127566367708,1.8215443274895755,1.7948307345710619,1.3573252368416289,1.3288931072996355,1.2366459853149336,1.1027176632755671,1.0015831530502175,0.98722610800073984,0.9452591375157644,0.86475216988687253,0.69212985758912271,0.48964393096372733,0.48567715851169052,0.47151575118149958,0.46698039531055946,0.46503053664572941,0.43919207566689,0.3461518490021121,0.32417132521013664,0.30453755427791013,0.19673259233401311,0.16762938626493074,0.13206545025674565,0.109855655781809,-0.0036670745441424102,-0.019440513077398192,-0.046083191550050168,-0.051401503469163057,-0.094780219044593397,-0.15403727388621938,-0.17198201439540672,-0.17829749865555994,-0.22754048951602712,-0.25816279191425945,-0.26077237506128936,-0.43666320991447838,-0.4765342803123801,-0.58196854879153392,-0.65035483022208229,-0.65396059444314303,-0.83574580708688906,-0.99558178275327402,-1.0675652210362665,-1.1049824109405275,-1.1796920830899928,-1.2673372788747976,-1.2753313955865293,-1.4404042283560996,-1.4480344114783454,-1.5800231961991558,-2.0471016870678018,-2.107980489120441,-2.1237643312180641,-2.9496750820439352],"text":["<b>Usain Bolt<\/b> (JAM)<br>Finals: 7  |  Titles: 6<br>Mean score: 2.43<br>Best score: 5.18","<b>Carl Lewis<\/b> (USA)<br>Finals: 6  |  Titles: 5<br>Mean score: 2.01<br>Best score: 4.98","<b>Valeriy Borzov<\/b> (URS)<br>Finals: 2  |  Titles: 1<br>Mean score: 1.82<br>Best score: 2.99","<b>Maurice Greene<\/b> (USA)<br>Finals: 5  |  Titles: 4<br>Mean score: 1.79<br>Best score: 3.35","<b>Justin Gatlin<\/b> (USA)<br>Finals: 8  |  Titles: 3<br>Mean score: 1.36<br>Best score: 4.05","<b>Donovan Bailey<\/b> (CAN)<br>Finals: 3  |  Titles: 2<br>Mean score: 1.33<br>Best score: 1.58","<b>Kishane Thompson<\/b> (JAM)<br>Finals: 2  |  Titles: 0<br>Mean score: 1.24<br>Best score: 1.33","<b>Fred Kerley<\/b> (USA)<br>Finals: 3  |  Titles: 1<br>Mean score: 1.10<br>Best score: 1.58","<b>Noah Lyles<\/b> (USA)<br>Finals: 3  |  Titles: 2<br>Mean score: 1.00<br>Best score: 1.42","<b>Allan Wells<\/b> (GBR)<br>Finals: 2  |  Titles: 1<br>Mean score: 0.99<br>Best score: 2.08","<b>Lamont Marcell Jacobs<\/b> (ITA)<br>Finals: 2  |  Titles: 1<br>Mean score: 0.95<br>Best score: 2.17","<b>Christian Coleman<\/b> (USA)<br>Finals: 4  |  Titles: 1<br>Mean score: 0.86<br>Best score: 2.79","<b>Linford Christie<\/b> (GBR)<br>Finals: 6  |  Titles: 2<br>Mean score: 0.69<br>Best score: 2.03","<b>Ato Boldon<\/b> (TTO)<br>Finals: 5  |  Titles: 0<br>Mean score: 0.49<br>Best score: 0.80","<b>Lennox Miller<\/b> (JAM)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.49<br>Best score: 0.94","<b>Leroy Burrell<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.47<br>Best score: 0.93","<b>Francis Obikwelu<\/b> (POR)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.47<br>Best score: 0.86","<b>Yohan Blake<\/b> (JAM)<br>Finals: 5  |  Titles: 1<br>Mean score: 0.47<br>Best score: 1.19","<b>Frank Fredericks<\/b> (NAM)<br>Finals: 6  |  Titles: 0<br>Mean score: 0.44<br>Best score: 0.91","<b>Walter Dix<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.35<br>Best score: 0.57","<b>Andre De Grasse<\/b> (CAN)<br>Finals: 4  |  Titles: 0<br>Mean score: 0.32<br>Best score: 0.54","<b>Calvin Smith<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.30<br>Best score: 0.61","<b>Dennis Mitchell<\/b> (USA)<br>Finals: 5  |  Titles: 0<br>Mean score: 0.20<br>Best score: 0.67","<b>Bernard Williams<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.17<br>Best score: 0.47","<b>Oblique Seville<\/b> (JAM)<br>Finals: 4  |  Titles: 1<br>Mean score: 0.13<br>Best score: 2.12","<b>Letsile Tebogo<\/b> (BOT)<br>Finals: 2  |  Titles: 0<br>Mean score: 0.11<br>Best score: 0.75","<b>Asafa Powell<\/b> (JAM)<br>Finals: 5  |  Titles: 0<br>Mean score: -0.00<br>Best score: 0.76","<b>Zharnel Hughes<\/b> (GBR)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.02<br>Best score: 0.75","<b>Daniel Bailey<\/b> (ANT)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.05<br>Best score: -0.03","<b>Darren Campbell<\/b> (GBR)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.05<br>Best score: 0.78","<b>Michael Frater<\/b> (JAM)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.09<br>Best score: 0.30","<b>Bruny Surin<\/b> (CAN)<br>Finals: 6  |  Titles: 0<br>Mean score: -0.15<br>Best score: 1.38","<b>Trayvon Bromell<\/b> (USA)<br>Finals: 3  |  Titles: 0<br>Mean score: -0.17<br>Best score: 1.21","<b>Kim Collins<\/b> (SKN)<br>Finals: 6  |  Titles: 1<br>Mean score: -0.18<br>Best score: 0.98","<b>Christophe Lemaitre<\/b> (FRA)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.23<br>Best score: 0.20","<b>Akani Simbine<\/b> (RSA)<br>Finals: 7  |  Titles: 0<br>Mean score: -0.26<br>Best score: 0.46","<b>Michael Rodgers<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.26<br>Best score: -0.04","<b>Churandy Martina<\/b> (AHO)<br>Finals: 3  |  Titles: 0<br>Mean score: -0.44<br>Best score: -0.08","<b>Richard Thompson<\/b> (TTO)<br>Finals: 3  |  Titles: 0<br>Mean score: -0.48<br>Best score: 0.33","<b>Kenneth Bednarek<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.58<br>Best score: -0.08","<b>Olapade Adeniken<\/b> (NGR)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.65<br>Best score: -0.20","<b>Jimmy Vicaut<\/b> (FRA)<br>Finals: 4  |  Titles: 0<br>Mean score: -0.65<br>Best score: -0.06","<b>Petar Petrov<\/b> (BUL)<br>Finals: 2  |  Titles: 0<br>Mean score: -0.84<br>Best score: 0.01","<b>Marc Burns<\/b> (TTO)<br>Finals: 4  |  Titles: 0<br>Mean score: -1.00<br>Best score: -0.40","<b>Michael Marsh<\/b> (USA)<br>Finals: 3  |  Titles: 0<br>Mean score: -1.07<br>Best score: 0.01","<b>Obadele Thompson<\/b> (BAR)<br>Finals: 3  |  Titles: 0<br>Mean score: -1.10<br>Best score: 0.14","<b>Abdul Hakim Sani Brown<\/b> (JPN)<br>Finals: 2  |  Titles: 0<br>Mean score: -1.18<br>Best score: -1.06","<b>Raymond Stewart<\/b> (JAM)<br>Finals: 6  |  Titles: 0<br>Mean score: -1.27<br>Best score: 0.18","<b>Desai Williams<\/b> (CAN)<br>Finals: 2  |  Titles: 0<br>Mean score: -1.28<br>Best score: -1.27","<b>Davidson Ezinwa<\/b> (NGR)<br>Finals: 3  |  Titles: 0<br>Mean score: -1.44<br>Best score: -0.59","<b>Aaron Brown<\/b> (CAN)<br>Finals: 2  |  Titles: 0<br>Mean score: -1.45<br>Best score: -1.42","<b>Robson Da Silva<\/b> (BRA)<br>Finals: 2  |  Titles: 0<br>Mean score: -1.58<br>Best score: -1.28","<b>Bingtian Su<\/b> (CHN)<br>Finals: 3  |  Titles: 0<br>Mean score: -2.05<br>Best score: -1.58","<b>Aziz Zakari<\/b> (GHA)<br>Finals: 2  |  Titles: 0<br>Mean score: -2.11<br>Best score: -1.64","<b>Darvis Patton<\/b> (USA)<br>Finals: 2  |  Titles: 0<br>Mean score: -2.12<br>Best score: -1.19","<b>Nesta Carter<\/b> (JAM)<br>Finals: 2  |  Titles: 0<br>Mean score: -2.95<br>Best score: 0.24"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(31,78,121,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(31,78,121,1)"}},"hoveron":"points","name":"All official results","legendgroup":"All official results","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,4,4,5],"y":[1.8233356247228505,0.58102477483433068,0.4541345251637956,0.07516387936660042],"text":["<b>Ben Johnson<\/b> (CAN)<br>Finals: 3  |  Titles: 0<br>Mean score: 1.82<br>Best score: 3.02","<b>Tyson Gay<\/b> (USA)<br>Finals: 4  |  Titles: 1<br>Mean score: 0.58<br>Best score: 1.81","<b>Tim Montgomery<\/b> (USA)<br>Finals: 4  |  Titles: 0<br>Mean score: 0.45<br>Best score: 1.28","<b>Dwain Chambers<\/b> (GBR)<br>Finals: 5  |  Titles: 0<br>Mean score: 0.08<br>Best score: 0.78"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(230,159,0,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(230,159,0,1)"}},"hoveron":"points","name":"Includes an annulled result","legendgroup":"Includes an annulled result","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7,6,3,2,5],"y":[2.6147204066171983,2.189012756636771,2.0033356247228506,2.0015443274895754,1.9748307345710618],"text":["Usain Bolt","Carl Lewis","Ben Johnson","Valeriy Borzov","Maurice Greene"],"hovertext":["","","","",""],"textfont":{"size":13.606299212598428,"color":"rgba(51,51,51,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":50,"r":8.6342880863428828,"b":44.034869240348698,"l":44.034869240348698},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"Source Sans Pro, Helvetica, Arial, sans-serif","size":17.268576172685766},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.7,8.3000000000000007],"tickmode":"array","ticktext":["2","3","4","5","6","7","8"],"tickvals":[2,3,4,5,6,7,8],"categoryorder":"array","categoryarray":["2","3","4","5","6","7","8"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148612},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"y","title":{"text":"Championship finals contested","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3.227894856476992,2.8929401810502551],"tickmode":"array","ticktext":["-3","-2","-1","0","1","2"],"tickvals":[-3,-2,-1,-4.4408920985006262e-16,0.99999999999999956,1.9999999999999996],"categoryorder":"array","categoryarray":["-3","-2","-1","0","1","2"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"x","title":{"text":"Mean dominance score","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":13.814860938148612},"title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685766}},"orientation":"h","x":0,"y":1.1000000000000001},"hovermode":"closest","height":520,"barmode":"relative","hoverlabel":{"bgcolor":"white","bordercolor":"#d0d0d0","font":{"size":13}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"c154813a6b":{"yintercept":{},"type":"scatter"},"c17332e4e3":{"x":{},"y":{},"colour":{},"text":{}},"c12fa80597":{"x":{},"y":{},"colour":{},"label":{}}},"cur_data":"c154813a6b","visdat":{"c154813a6b":["function (y) ","x"],"c17332e4e3":["function (y) ","x"],"c12fa80597":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<img src="index_files/figure-html/fig-career-1.png" class="img-fluid figure-img" alt="Scatter plot of mean dominance score against finals contested; Usain Bolt and Carl Lewis sit highest among athletes with six or more finals." width="768">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-career-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Mean dominance score by number of championship finals contested (minimum two finals). Amber points indicate careers that include a result later annulled for doping. Hover for details.
+Figure&nbsp;3: Mean dominance score by number of championship finals contested (minimum two finals). Grey points indicate careers that include a result later annulled for doping. The top five are labelled.
 </figcaption>
 </figure>
+</div>
 </div>
 </div>
 </section>
 <section id="dominance-over-time" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="dominance-over-time"><span class="header-section-number">3.3</span> Dominance over time</h3>
-<p><a href="#fig-over-time" class="quarto-xref">Figure&nbsp;3</a> plots the winning score in each final. The correlation between year and winning score is -0.24. With only 35 finals, I read this as description, not as evidence of a trend.</p>
+<p><a href="#fig-over-time" class="quarto-xref">Figure&nbsp;4</a> plots the winning score in each final. The correlation between year and winning score is -0.24. With only 35 finals, I read this as description, not as evidence of a trend.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>winners_plot <span class="ot">&lt;-</span> winners <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">tip =</span> <span class="fu">paste0</span>(<span class="st">"&lt;b&gt;"</span>, year, <span class="st">" "</span>, competition, <span class="st">"&lt;/b&gt; ("</span>, city, <span class="st">")"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"&lt;br&gt;Winner: "</span>, Competitor, <span class="st">" ("</span>, <span class="fu">fmt</span>(time), <span class="st">"s)"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"&lt;br&gt;Score: "</span>, <span class="fu">fmt</span>(score),</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">if_else</span>(status <span class="sc">==</span> <span class="st">"annulled"</span>, <span class="st">"&lt;br&gt;&lt;i&gt;Result annulled for doping&lt;/i&gt;"</span>, <span class="st">""</span>)))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(winners_plot, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> score)) <span class="sc">+</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> grey,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(winners_plot, status <span class="sc">!=</span> <span class="st">"annulled"</span>),</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">colour =</span> competition, <span class="at">text =</span> tip), <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(winners_plot, status <span class="sc">==</span> <span class="st">"annulled"</span>),</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">text =</span> tip), <span class="at">shape =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">stroke =</span> <span class="fl">1.4</span>, <span class="at">colour =</span> grey) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Olympic Games"</span> <span class="ot">=</span> teal,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"World Championships"</span> <span class="ot">=</span> purple)) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Winner's dominance score"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  theme_goat</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">style_plotly</span>(p3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(winners, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> score)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"grey"</span>]],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(winners, status <span class="sc">!=</span> <span class="st">"annulled"</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">colour =</span> competition), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(winners, status <span class="sc">==</span> <span class="st">"annulled"</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">shape =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">stroke =</span> <span class="fl">1.3</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"grey"</span>]]) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Olympic Games"</span>       <span class="ot">=</span> goat_cols[[<span class="st">"ink"</span>]],</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"World Championships"</span> <span class="ot">=</span> goat_cols[[<span class="st">"amber"</span>]])) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Winner's dominance score"</span>) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-over-time" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell-output-display">
+<div id="fig-over-time" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatter plot of winning dominance score by year with no clear trend; the highest point is Beijing 2008.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="htmlwidget-87f00778a9a29e254047" style="width:100%;height:502px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-87f00778a9a29e254047">{"x":{"data":[{"x":[1968,1968.7215189873418,1969.4430379746836,1970.1645569620252,1970.8860759493671,1971.6075949367089,1972.3291139240507,1973.0506329113923,1973.7721518987341,1974.493670886076,1975.2151898734178,1975.9367088607594,1976.6582278481012,1977.379746835443,1978.1012658227849,1978.8227848101267,1979.5443037974683,1980.2658227848101,1980.9873417721519,1981.7088607594937,1982.4303797468353,1983.1518987341772,1983.873417721519,1984.5949367088608,1985.3164556962026,1986.0379746835442,1986.7594936708861,1987.4810126582279,1988.2025316455697,1988.9240506329113,1989.6455696202531,1990.367088607595,1991.0886075949368,1991.8101265822784,1992.5316455696202,1993.253164556962,1993.9746835443038,1994.6962025316457,1995.4177215189873,1996.1392405063291,1996.8607594936709,1997.5822784810127,1998.3037974683543,1999.0253164556962,1999.746835443038,2000.4683544303798,2001.1898734177216,2001.9113924050632,2002.632911392405,2003.3544303797469,2004.0759493670887,2004.7974683544303,2005.5189873417721,2006.2405063291139,2006.9620253164558,2007.6835443037974,2008.4050632911392,2009.126582278481,2009.8481012658228,2010.5696202531647,2011.2911392405063,2012.0126582278481,2012.7341772151899,2013.4556962025317,2014.1772151898733,2014.8987341772151,2015.620253164557,2016.3417721518988,2017.0632911392404,2017.7848101265822,2018.506329113924,2019.2278481012659,2019.9493670886077,2020.6708860759493,2021.3924050632911,2022.1139240506329,2022.8354430379748,2023.5569620253164,2024.2784810126582,2025],"y":[2.5561663235897645,2.5889935429809534,2.6183931255841753,2.6444609185559731,2.6672927690529127,2.6869845242315371,2.7036320312483957,2.7173311372600346,2.7281776894230143,2.7362675348938792,2.7416965208291795,2.7445604943854662,2.7449553027192901,2.7429767929872018,2.7387208123457505,2.732283207951486,2.7237598269609626,2.7132465165307256,2.7008391238173273,2.6866334959773175,2.6707254801672535,2.6530448980084533,2.6289952386240936,2.5974339117656711,2.559680143578662,2.517053160208556,2.4708721878008024,2.4224564525008891,2.3731251804542928,2.3241975978065046,2.2769929307029697,2.232830405289179,2.1928611861523697,2.1455883038064703,2.0867776380897838,2.0212140925034667,1.9536825705486618,1.888967975726515,1.8318552115381854,1.7871291814847803,1.7595747890674629,1.7588778901625113,1.7922049161609575,1.8509480847070949,1.926133961973981,2.0087891141346805,2.089940107362255,2.1606135078297499,2.2118358817102757,2.2395271130214924,2.2676140545163332,2.298789425094856,2.3307861854120864,2.3613372961230188,2.3881757178826613,2.4090344113460112,2.4216463371680894,2.4238234331135398,2.4173560713580096,2.4046060915734149,2.3865593355437915,2.3642016450531544,2.338518861885539,2.3104968278249722,2.2811213846554934,2.2513783741611118,2.2202652466501629,2.1850949362624386,2.1462244849900514,2.1040620399064909,2.0590157480852813,2.0114937565999353,1.9619042125239663,1.910655262930903,1.8581202694505206,1.804224066059616,1.7486034454170534,1.6908928390483409,1.6307266784789303,1.5677393952343288],"text":"","type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.0236220472440949,"color":"rgba(160,164,168,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1968,1972,1976,1980,1984,1992,1996,2000,2004,2008,2012,2016,2021,2024],"y":[2.5150517301276318,2.9880715233359711,1.6858874319324906,2.0758128227613826,4.9817561231436338,1.8184068209347397,1.5048776084504094,3.3453335903316126,1.0072203103706543,5.1826873769508666,2.4810249007296066,2.3419100734357592,2.1652287380818493,1.3273191258231589],"text":["<b>1968 Olympic Games<\/b> (Mexico City)<br>Winner: Jim Hines (9.95s)<br>Score: 2.52","<b>1972 Olympic Games<\/b> (Munich)<br>Winner: Valeriy Borzov (10.14s)<br>Score: 2.99","<b>1976 Olympic Games<\/b> (Montreal)<br>Winner: Hasely Crawford (10.06s)<br>Score: 1.69","<b>1980 Olympic Games<\/b> (Moscow)<br>Winner: Allan Wells (10.25s)<br>Score: 2.08","<b>1984 Olympic Games<\/b> (Los Angeles)<br>Winner: Carl Lewis (9.99s)<br>Score: 4.98","<b>1992 Olympic Games<\/b> (Barcelona)<br>Winner: Linford Christie (9.96s)<br>Score: 1.82","<b>1996 Olympic Games<\/b> (Atlanta)<br>Winner: Donovan Bailey (9.84s)<br>Score: 1.50","<b>2000 Olympic Games<\/b> (Sydney)<br>Winner: Maurice Greene (9.87s)<br>Score: 3.35","<b>2004 Olympic Games<\/b> (Athens)<br>Winner: Justin Gatlin (9.85s)<br>Score: 1.01","<b>2008 Olympic Games<\/b> (Beijing)<br>Winner: Usain Bolt (9.69s)<br>Score: 5.18","<b>2012 Olympic Games<\/b> (London)<br>Winner: Usain Bolt (9.63s)<br>Score: 2.48","<b>2016 Olympic Games<\/b> (Rio de Janeiro)<br>Winner: Usain Bolt (9.81s)<br>Score: 2.34","<b>2021 Olympic Games<\/b> (Tokyo)<br>Winner: Lamont Marcell Jacobs (9.80s)<br>Score: 2.17","<b>2024 Olympic Games<\/b> (Paris)<br>Winner: Noah Lyles (9.79s)<br>Score: 1.33"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(15,118,110,1)","opacity":1,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(15,118,110,1)"}},"hoveron":"points","name":"Olympic Games","legendgroup":"Olympic Games","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1983,1991,1993,1995,1997,1999,2001,2003,2005,2007,2009,2011,2013,2015,2017,2019,2022,2023,2025],"y":[4.1447335314790896,1.1808924357793569,2.0334764049022205,1.5753150945315173,1.3978420333083119,1.881263462138808,1.6214955058221543,0.98198050606193921,4.0532722304666935,1.8126034655117085,1.9792971284385217,1.188384872931858,2.1552636243213095,2.0859116465613843,1.1283902110536836,2.7939646548165662,1.5785796611608844,1.4211464185146914,2.1189484488150359],"text":["<b>1983 World Championships<\/b> (Helsinki)<br>Winner: Carl Lewis (10.07s)<br>Score: 4.14","<b>1991 World Championships<\/b> (Tokyo)<br>Winner: Carl Lewis (9.86s)<br>Score: 1.18","<b>1993 World Championships<\/b> (Stuttgart)<br>Winner: Linford Christie (9.87s)<br>Score: 2.03","<b>1995 World Championships<\/b> (Gothenburg)<br>Winner: Donovan Bailey (9.97s)<br>Score: 1.58","<b>1997 World Championships<\/b> (Athens)<br>Winner: Maurice Greene (9.86s)<br>Score: 1.40","<b>1999 World Championships<\/b> (Seville)<br>Winner: Maurice Greene (9.80s)<br>Score: 1.88","<b>2001 World Championships<\/b> (Edmonton)<br>Winner: Maurice Greene (9.82s)<br>Score: 1.62","<b>2003 World Championships<\/b> (Saint-Denis)<br>Winner: Kim Collins (10.07s)<br>Score: 0.98","<b>2005 World Championships<\/b> (Helsinki)<br>Winner: Justin Gatlin (9.88s)<br>Score: 4.05","<b>2007 World Championships<\/b> (Osaka)<br>Winner: Tyson Gay (9.85s)<br>Score: 1.81","<b>2009 World Championships<\/b> (Berlin)<br>Winner: Usain Bolt (9.58s)<br>Score: 1.98","<b>2011 World Championships<\/b> (Daegu)<br>Winner: Yohan Blake (9.92s)<br>Score: 1.19","<b>2013 World Championships<\/b> (Moscow)<br>Winner: Usain Bolt (9.77s)<br>Score: 2.16","<b>2015 World Championships<\/b> (Beijing)<br>Winner: Usain Bolt (9.79s)<br>Score: 2.09","<b>2017 World Championships<\/b> (London)<br>Winner: Justin Gatlin (9.92s)<br>Score: 1.13","<b>2019 World Championships<\/b> (Doha)<br>Winner: Christian Coleman (9.76s)<br>Score: 2.79","<b>2022 World Championships<\/b> (Eugene)<br>Winner: Fred Kerley (9.86s)<br>Score: 1.58","<b>2023 World Championships<\/b> (Budapest)<br>Winner: Noah Lyles (9.83s)<br>Score: 1.42","<b>2025 World Championships<\/b> (Tokyo)<br>Winner: Oblique Seville (9.77s)<br>Score: 2.12"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(124,58,237,1)","opacity":1,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(124,58,237,1)"}},"hoveron":"points","name":"World Championships","legendgroup":"World Championships","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1987,1988],"y":[2.2901197169673906,3.015672991749986],"text":["<b>1987 World Championships<\/b> (Rome)<br>Winner: Ben Johnson (9.83s)<br>Score: 2.29<br><i>Result annulled for doping<\/i>","<b>1988 Olympic Games<\/b> (Seoul)<br>Winner: Ben Johnson (9.79s)<br>Score: 3.02<br><i>Result annulled for doping<\/i>"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(160,164,168,1)","opacity":1,"size":13.228346456692915,"symbol":"x-thin-open","line":{"width":5.2913385826771648,"color":"rgba(160,164,168,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":50,"r":8.6342880863428828,"b":26.766293067662936,"l":37.127438771274399},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"Source Sans Pro, Helvetica, Arial, sans-serif","size":17.268576172685766},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1965.1500000000001,2027.8499999999999],"tickmode":"array","ticktext":["1970","1980","1990","2000","2010","2020"],"tickvals":[1970,1980,1990,2000,2010,2020],"categoryorder":"array","categoryarray":["1970","1980","1990","2000","2010","2020"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148612},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.77194516251749279,5.3927227204953132],"tickmode":"array","ticktext":["1","2","3","4","5"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["1","2","3","4","5"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714414,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"x","title":{"text":"Winner's dominance score","font":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685766}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":13.814860938148612},"title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685766}},"orientation":"h","x":0,"y":1.1000000000000001},"hovermode":"closest","height":520,"barmode":"relative","hoverlabel":{"bgcolor":"white","bordercolor":"#d0d0d0","font":{"size":13}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"c1181ce190":{"x":{},"y":{},"type":"scatter"},"c17984633d":{"x":{},"y":{},"colour":{},"text":{}},"c12276b07c":{"x":{},"y":{},"text":{}}},"cur_data":"c1181ce190","visdat":{"c1181ce190":["function (y) ","x"],"c17984633d":["function (y) ","x"],"c12276b07c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<img src="index_files/figure-html/fig-over-time-1.png" class="img-fluid figure-img" alt="Scatter plot of winning dominance score by year with no clear trend; the highest point is Beijing 2008." width="768">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Dominance score of each final’s winner as the race was run, 1968–2025. Crosses indicate winning performances later annulled for doping; the dashed line is a LOESS smoother. Hover for details.
+Figure&nbsp;4: Dominance score of each final’s winner as the race was run, 1968–2025. Crosses indicate winning performances later annulled for doping; the dashed line is a LOESS smoother.
 </figcaption>
 </figure>
 </div>
 </div>
-<!-- TODO (Emmy): Robustness section goes here, before Discussion.
-## Robustness {#sec-robust}
-Planned checks (write the R in R/03_robustness.R, present results here):
-  1. Raw margin in seconds (no SD scaling) - does Beijing 2008 stay #1?
-  2. Robust z: median / MAD of the other finishers instead of mean / SD
-  3. Drop doping-annulled races and runners entirely
-  4. Career minimum of 3 finals instead of 2
-  5. Empirical-Bayes shrinkage of career means toward the overall mean
-Report: rank of each top-10 athlete under each choice, in one table.
--->
+</div>
 </section>
 </section>
-<section id="discussion" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="discussion"><span class="header-section-number">4</span> Discussion</h2>
-<p>The numbers and the narrative agree: Usain Bolt ranks first on both career and single-race dominance. So does the 2026 ranking by <span class="citation" data-cites="hanley2026">Hanley et al. (<a href="#ref-hanley2026" role="doc-biblioref">2026</a>)</span>, which used an entirely different method, counting medals and world records, and also placed Bolt first. When two methods built on different definitions of greatness reach the same answer, that agreement means something.</p>
+<section id="sec-robust" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-robust"><span class="header-section-number">4</span> Robustness</h2>
+<p>Every choice in <a href="#sec-methods" class="quarto-xref">Section&nbsp;2</a> could have gone another way, so I re-ranked every career under five alternatives, each answering a specific objection to the baseline (code in <code>R/03_robustness.R</code>):</p>
+<ul>
+<li><strong>Minimum three finals.</strong> Two finals is a small sample. The cost: before 1983 there were no World Championships, so no athlete who debuted before then can reach three finals. A higher minimum removes an era, not just noise.</li>
+<li><strong>Raw margin in seconds.</strong> No division by the field’s spread, so a winner is not rewarded for racing in a tightly bunched field.</li>
+<li><strong>Median and MAD.</strong> The median and median absolute deviation of the other finishers replace the mean and standard deviation, so one slow finisher cannot move the score.</li>
+<li><strong>Annulled runs removed.</strong> Doping-annulled performances are taken out of their races entirely, and everyone else is re-scored against the field that remains.</li>
+<li><strong>Shrunk toward the mean.</strong> An empirical-Bayes estimate pulls each career average toward the overall mean, more strongly for athletes with fewer finals. A 2-final average is treated like a hitter’s 50 plate appearances.</li>
+</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>spec_order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Baseline"</span>, <span class="st">"Minimum 3 finals"</span>, <span class="st">"Raw margin (seconds)"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Median / MAD"</span>, <span class="st">"Annulled runs removed"</span>, <span class="st">"Shrunk toward mean"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>top10 <span class="ot">&lt;-</span> career <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>robust <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Competitor <span class="sc">%in%</span> top10<span class="sc">$</span>Competitor) <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Competitor, spec, rank) <span class="sc">|&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> spec, <span class="at">values_from =</span> rank) <span class="sc">|&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Baseline) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">select</span>(top10, Competitor, has_annulled), <span class="at">by =</span> <span class="st">"Competitor"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Competitor =</span> <span class="fu">paste0</span>(Competitor, <span class="fu">if_else</span>(has_annulled, <span class="st">" *"</span>, <span class="st">""</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">Athlete =</span> Competitor, <span class="fu">all_of</span>(spec_order)) <span class="sc">|&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="sc">-</span>Athlete, \(x) <span class="fu">if_else</span>(<span class="fu">is.na</span>(x), <span class="st">"–"</span>, <span class="fu">as.character</span>(x)))) <span class="sc">|&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="fu">rep</span>(<span class="st">"r"</span>, <span class="fu">length</span>(spec_order))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-robust" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Career rank of the baseline top ten under each specification. A dash means the athlete is not ranked under that rule. An asterisk marks careers that include results later annulled for doping; under the annulled-removed rule those performances are dropped.
+</figcaption>
+<div aria-describedby="tbl-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 11%">
+<col style="width: 18%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Athlete</th>
+<th style="text-align: right;">Baseline</th>
+<th style="text-align: right;">Minimum 3 finals</th>
+<th style="text-align: right;">Raw margin (seconds)</th>
+<th style="text-align: right;">Median / MAD</th>
+<th style="text-align: right;">Annulled runs removed</th>
+<th style="text-align: right;">Shrunk toward mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Usain Bolt</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carl Lewis</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ben Johnson *</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Valeriy Borzov</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maurice Greene</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Justin Gatlin</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Donovan Bailey</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kishane Thompson</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fred Kerley</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Noah Lyles</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Three results follow. First, Usain Bolt is first under 4 of 6 specifications and second under the rest, so the top of the ranking holds. Second, first place is not settled. With annulled runs removed, Carl Lewis edges ahead (2.46 against 2.43), because Ben Johnson finished ahead of him in both 1987 and 1988, and taking Johnson out of those races raises Lewis’s score. That gap is too small to separate them. Third, the order below the top two depends on the specification. The median-based score puts Valeriy Borzov first and Allan Wells third, each on two finals. With only seven other finishers per race the MAD is itself noisy, so I read this as a sign of fragility, not as a better ranking. Shrinkage moves Kishane Thompson from eighth to 12 for the same reason: two finals are not much evidence.</p>
+</section>
+<section id="sec-baseball" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-baseball"><span class="header-section-number">5</span> Applying the Method to Baseball</h2>
+<p><em>Run <code>R/04_era_demo.R</code> to generate <code>data/processed/era_demo.csv</code>; this section is built from it.</em></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(era, <span class="fu">aes</span>(<span class="at">x =</span> ERA_plus, <span class="at">y =</span> z)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">alpha =</span> <span class="fl">0.18</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"track"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> top_z, <span class="at">size =</span> <span class="fl">2.6</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"amber"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> top_z, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste</span>(pitcher, yearID)),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="fl">1.08</span>, <span class="at">size =</span> <span class="fl">3.3</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"grey"</span>]], <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">100</span>, <span class="at">colour =</span> goat_cols[[<span class="st">"grey"</span>]], <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"ERA+ (100 = league average)"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Dominance score within league-season"</span>) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_goat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Where the analogy stops: ERA+ rests on a league of thousands of innings, while each sprint final has seven other runners. The baseball version works because its fields are large. The sprint version is the harder problem, which is why <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a> exists.</p>
+</section>
+<section id="discussion" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="discussion"><span class="header-section-number">6</span> Discussion</h2>
+<p>The numbers and the narrative mostly agree: Usain Bolt ranks first on both career and single-race dominance, and is never lower than second under any specification in <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a>. So does the 2026 ranking by <span class="citation" data-cites="hanley2026">Hanley et al. (<a href="#ref-hanley2026" role="doc-biblioref">2026</a>)</span>, which used an entirely different method, counting medals and world records, and also placed Bolt first. When two methods built on different definitions of greatness reach the same answer, that agreement means something. What it does not settle is the gap to Lewis, which disappears once Johnson’s annulled races are removed.</p>
 <p>But look closely at what the score rewards. Bolt’s world-record 9.58 at Berlin 2009 scores 1.98, far below his 9.69 at Beijing 2008 (5.18). One slower finisher in 2009 widened the field’s spread and shrank his margin in standardized terms. By this measure, his fastest race was not his most dominant one. That is not a flaw in the score; it is the ancient definition doing exactly what it says. The Greeks did not care about the clock either.</p>
 <p>And every result in this paper rests on choices I made: to count races as they were run, to set injured runners aside, to compare athletes only with their own fields. Each is defensible. None is objective. The modern scoreboard did not remove the narrator; it moved the narrator into the method. The only honest response is to show every choice, which is what <a href="#sec-methods" class="quarto-xref">Section&nbsp;2</a> does.</p>
 <p>Anyone who has sat at a family dinner table and been told, with complete certainty, that athletes today are soft, and that nobody could touch Jordan, knows that no statistic will change that person’s mind. They are not remembering a performance; they are remembering a story. Maybe that is what makes sports worth arguing about. Pindar told you who won, and you believed him. We have more information than any fans in history, and we still cannot agree. That is not because we are irrational. It is because greatness is genuinely contested, and the debate forces each of us to define what we value: rings or longevity, dominance or consistency, the era we watched or the one we did not. For the media, the debate never being solved is not a failure. It is the business model.</p>
 </section>
-<section id="sec-limits" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-limits"><span class="header-section-number">5</span> Limitations</h2>
+<section id="sec-limits" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-limits"><span class="header-section-number">7</span> Limitations</h2>
 <ul>
 <li><strong>Field strength is not controlled.</strong> As <a href="#eq-diff" class="quarto-xref">Equation&nbsp;4</a> shows, race effects cancel, but the ability of the other finalists does not. Weaker fields, including those affected by the 1980 and 1984 boycotts, inflate scores.</li>
-<li><strong>Sensitivity to spread.</strong> Because the score is scaled by the field’s standard deviation, one outlying finisher can noticeably change everyone else’s score.</li>
+<li><strong>Sensitivity to spread.</strong> Because the score is scaled by the field’s standard deviation, one outlying finisher can noticeably change everyone else’s score. The median-based check in <a href="#sec-robust" class="quarto-xref">Section&nbsp;4</a> shows how much the order below the top two depends on this.</li>
 <li><strong>Small samples.</strong> Each final has six to nine scored finishers, and most athletes ran only a few finals, so career averages are imprecise.</li>
 <li><strong>Scope.</strong> I analyze only championship finals, not heats, semifinals or other elite races.</li>
 </ul>
 </section>
-<section id="sec-context" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-context"><span class="header-section-number">6</span> Context: Who Controls the Victory?</h2>
+<section id="sec-context" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="sec-context"><span class="header-section-number">8</span> Context: Who Controls the Victory?</h2>
 <p>In June 2026, LeBron James told TIME magazine that he would not put anyone above himself as the greatest of all time: “I’m not taking nobody over me. There’s no question” <span class="citation" data-cites="espn2026">(<a href="#ref-espn2026" role="doc-biblioref">ESPN, 2026</a>)</span>. Depending on who you ask, the claim is either obviously true or obviously wrong. Stephen A. Smith’s response was revealing. He did not say James was wrong about the statistics, or that his championships did not add up. He said, “The man is addicted to trying to control the narrative” <span class="citation" data-cites="fadeaway2026 sportscasting">(<a href="#ref-fadeaway2026" role="doc-biblioref">Fadeaway World, 2026</a>; <a href="#ref-sportscasting" role="doc-biblioref">Sportscasting, n.d.</a>)</span>. The accusation was not about data at all. It was about storytelling, and about who controls the victory narrative.</p>
 <p>Smith does not play basketball. He never has. Yet he is one of the most powerful sports narrators alive, and his verdict on Jordan versus LeBron carries more weight in public discourse than any statistic. His version of greatness shapes what millions of people believe.</p>
 <p>I argue that Smith described the oldest accusation in sports history. In antiquity, Pindar and the other authors who celebrated Olympic victors were paid to do exactly what James and Smith are doing: control the narrative, frame the legacy, and make sure their version of a victory was the one that survived.</p>
 <p>This paper makes three contributions. First, it places the modern GOAT debate inside that much older tension between narrative and record. Second, it takes the ancient definition of victory, beating the man next to you rather than the clock, and turns it into a measurement: a within-race dominance score for every finalist in 35 Olympic and World Championship men’s 100m finals. I show that this score removes race-level confounders by the same logic as fixed effects. Third, it documents every choice behind the measurement, because those choices are where the narrative hides.</p>
-<section id="pindar-and-the-business-of-narrative" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="pindar-and-the-business-of-narrative"><span class="header-section-number">6.1</span> Pindar and the business of narrative</h3>
+<section id="pindar-and-the-business-of-narrative" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="pindar-and-the-business-of-narrative"><span class="header-section-number">8.1</span> Pindar and the business of narrative</h3>
 <p>When Pindar was commissioned to write a victory ode, he was not documenting a result; he was manufacturing one. Odes were built to travel and were often performed weeks after the victory, so the version that survived was the poet’s <span class="citation" data-cites="kuleuven">(<a href="#ref-kuleuven" role="doc-biblioref">KU Leuven, n.d.</a>)</span>. This is why we remember Pindar’s Hieron more vividly than the historical Hieron of Syracuse. The poet, not the race, decided what the victory meant.</p>
 </section>
-<section id="the-empty-scoreboard" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="the-empty-scoreboard"><span class="header-section-number">6.2</span> The empty scoreboard</h3>
+<section id="the-empty-scoreboard" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="the-empty-scoreboard"><span class="header-section-number">8.2</span> The empty scoreboard</h3>
 <p>There was no record-keeping of performance at the ancient Olympics. The Greeks had systems for judging competition, but they deliberately chose not to measure athletic performance <span class="citation" data-cites="greeceis miller2004">(<a href="#ref-greeceis" role="doc-biblioref">Greece Is, n.d.</a>; <a href="#ref-miller2004" role="doc-biblioref">Miller, 2004</a>)</span>. Athletic excellence was qualitative: you either had it or you did not, and the best man won. Victory meant beating the man next to you, not the clock.</p>
 </section>
-<section id="from-champion-to-god" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="from-champion-to-god"><span class="header-section-number">6.3</span> From champion to god</h3>
+<section id="from-champion-to-god" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="from-champion-to-god"><span class="header-section-number">8.3</span> From champion to god</h3>
 <p>Theagenes of Thasos is the clearest example of where this leads. He reportedly won around 1,400 bouts across a 22-year career, which makes him arguably the most dominant athlete of the ancient world. After his death, his statue became a site of worship, effectively declaring him a god <span class="citation" data-cites="greekreporter2025">(<a href="#ref-greekreporter2025" role="doc-biblioref">Greek Reporter, 2025</a>)</span>. The ancient world resolved its GOAT debates by raising the hero to divine status.</p>
 <p>That is what the modern GOAT debate is still reaching toward. Jordan fans do not just think he was the best basketball player; they think he was something beyond human. And sports media is more than happy to sell that narrative, because it is the product. Smith is not paid to recite statistics. He is paid to tell a story.</p>
 </section>
-<section id="faster-higher-stronger" class="level3" data-number="6.4">
-<h3 data-number="6.4" class="anchored" data-anchor-id="faster-higher-stronger"><span class="header-section-number">6.4</span> Faster, higher, stronger</h3>
+<section id="faster-higher-stronger" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="faster-higher-stronger"><span class="header-section-number">8.4</span> Faster, higher, stronger</h3>
 <p>In 1896, the modern Olympic movement organized itself around <em>Citius, Altius, Fortius</em>: faster, higher, stronger. This was a major departure from antiquity, and it produced a new kind of worship, built on statistics. Now that we can measure and rank, we can ask the questions Pindar never could: <em>Who is the greatest of all time? Compared to who? Compared to when?</em></p>
 </section>
-<section id="can-greatness-be-quantified" class="level3" data-number="6.5">
-<h3 data-number="6.5" class="anchored" data-anchor-id="can-greatness-be-quantified"><span class="header-section-number">6.5</span> Can greatness be quantified?</h3>
+<section id="can-greatness-be-quantified" class="level3" data-number="8.5">
+<h3 data-number="8.5" class="anchored" data-anchor-id="can-greatness-be-quantified"><span class="header-section-number">8.5</span> Can greatness be quantified?</h3>
 <p>Measurement does not end the argument. In a 2026 study, sixteen sports scientists set out to build a data-driven ranking of the greatest runners at the Olympic Games and World Championships <span class="citation" data-cites="hanley2026">(<a href="#ref-hanley2026" role="doc-biblioref">Hanley et al., 2026</a>)</span>. Before the study, an informal survey of 63 coaches, athletes and sport scientists at a 2024 conference showed that even the experts did not agree on the criteria. The authors concluded that “no manner of performing such a ranking task can be perfect or completely objective.” Change the era, and you change the winner. A ranking table looks like a set of numbers, but it is really a narrative choice. And if scientists cannot agree on what greatness means in running, a sport with a clock, the basketball debate never stood a chance <span class="citation" data-cites="nelson">(<a href="#ref-nelson" role="doc-biblioref">Nelson, n.d.</a>)</span>.</p>
 </section>
-<section id="the-question-i-ask" class="level3" data-number="6.6">
-<h3 data-number="6.6" class="anchored" data-anchor-id="the-question-i-ask"><span class="header-section-number">6.6</span> The question I ask</h3>
+<section id="the-question-i-ask" class="level3" data-number="8.6">
+<h3 data-number="8.6" class="anchored" data-anchor-id="the-question-i-ask"><span class="header-section-number">8.6</span> The question I ask</h3>
 <p>So I narrow the question. Instead of asking who is the greatest, I return to the ancient definition of victory and ask who most dominated <strong>the runners next to them</strong>. Then I make every choice behind the answer visible.</p>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">7</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">9</span> Conclusion</h2>
 <p>The ancient Greeks did not measure athletic performance; they let the poets decide. The modern Olympics promised to replace the poet with the clock. This paper shows that the clock does not settle the question either, but that measurement can recover something the ancient world valued: how far you beat the people next to you. By that standard, Usain Bolt is the most dominant 100m sprinter of the championship era.</p>
 <p>The GOAT debate is probably never going to be solved, and the deeper question was never really about the numbers. It is the question I left with the faculty in Athens: <strong>who is defining greatness for you?</strong></p>
 </section>
@@ -583,7 +890,7 @@ Report: rank of each top-10 athlete under each choice, in one table.
 </section>
 <section id="data-and-code-availability" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="data-and-code-availability">Data and Code Availability</h2>
-<p>All data and code are available in the <a href="https://github.com/etd2122/100m-goat">GitHub repository</a>. <code>R/01_clean.R</code> builds and validates the finals dataset, <code>R/02_score.R</code> computes the scores and rankings, and this paper is generated from <code>index.qmd</code>. I conducted the analysis in R <span class="citation" data-cites="rcore2026">(<a href="#ref-rcore2026" role="doc-biblioref">R Core Team, 2026</a>)</span> using the tidyverse <span class="citation" data-cites="wickham2019">(<a href="#ref-wickham2019" role="doc-biblioref"><span class="nocase">Wickham et al.</span>, 2019</a>)</span> and plotly <span class="citation" data-cites="sievert2020">(<a href="#ref-sievert2020" role="doc-biblioref">Sievert, 2020</a>)</span>, with package versions recorded by <code>renv</code>.</p>
+<p>All data and code are available in the <a href="https://github.com/etd2122/100m-goat">GitHub repository</a>. <code>R/01_clean.R</code> builds and validates the finals dataset, <code>R/02_score.R</code> computes the scores and rankings, <code>R/03_robustness.R</code> re-ranks careers under alternative choices, <code>R/04_era_demo.R</code> builds the baseball comparison from the Lahman package, and this paper is generated from <code>index.qmd</code> with charts styled by <code>R/theme_goat.R</code>. I conducted the analysis in R <span class="citation" data-cites="rcore2026">(<a href="#ref-rcore2026" role="doc-biblioref">R Core Team, 2026</a>)</span> using the tidyverse <span class="citation" data-cites="wickham2019">(<a href="#ref-wickham2019" role="doc-biblioref">Wickham et al., 2019</a>)</span>, with package versions recorded by <code>renv</code>.</p>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -618,9 +925,6 @@ Nelson, K. (n.d.). <em>How can we quantify greatness in the <span>NBA</span>? <s
 <div id="ref-rcore2026" class="csl-entry" role="listitem">
 R Core Team. (2026). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
-<div id="ref-sievert2020" class="csl-entry" role="listitem">
-Sievert, C. (2020). <em>Interactive web-based data visualization with <span>R</span>, plotly, and shiny</em>. <span>Chapman and Hall/CRC</span>.
-</div>
 <div id="ref-sportscasting" class="csl-entry" role="listitem">
 Sportscasting. (n.d.). <em><span>LeBron James</span> and <span>Michael Jordan</span> <span>GOAT</span> debate comments</em>. Retrieved October 31, 2026, from <a href="https://www.sportscasting.com/news/lebron-james-michael-jordan-goat-debate-comments/">https://www.sportscasting.com/news/lebron-james-michael-jordan-goat-debate-comments/</a>
 </div>
@@ -628,7 +932,7 @@ Sportscasting. (n.d.). <em><span>LeBron James</span> and <span>Michael Jordan</s
 Stock, J. H., &amp; Watson, M. W. (2019). <em>Introduction to econometrics</em> (4th ed.). Pearson.
 </div>
 <div id="ref-wickham2019" class="csl-entry" role="listitem">
-<span class="nocase">Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., et al.</span> (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., et al. (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
 </div>
 <div id="ref-worldathletics" class="csl-entry" role="listitem">
 World Athletics. (n.d.). <em>All-time top lists: 100 metres, men</em>. Retrieved October 31, 2026, from <a href="https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/men/senior">https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/men/senior</a>
@@ -639,257 +943,237 @@ World Athletics. (n.d.). <em>All-time top lists: 100 metres, men</em>. Retrieved
 </section>
 
 </main> <!-- /main -->
-<script>
-/* Site styling only: refit the interactive charts to their box on load and on resize (mobile). */
-(function () {
-  function fit() {
-    if (!window.Plotly) return;
-    document.querySelectorAll('.js-plotly-plot').forEach(function (el) {
-      Plotly.relayout(el, { width: el.parentElement.clientWidth });
-    });
-  }
-  window.addEventListener('load', function () { setTimeout(fit, 300); });
-  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 150); });
-})();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/etd2122\.github\.io\/100m-goat\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/etd2122\.github\.io\/100m-goat\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -897,161 +1181,185 @@ World Athletics. (n.d.). <em>All-time top lists: 100 metres, men</em>. Retrieved
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 
 
